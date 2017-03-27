@@ -7,15 +7,12 @@ function love.load(arg)
 map = sti("invisibile.lua")
 
 
-spawnpoint.posX = 384
-spawnpoint.posY = 640
-player.posX = spawnpoint.posX
-player.posY = spawnpoint.posY
+player.posX = 10
+player.posY = 10
 player.size = 30
 player.move = 1
 player.walk = 1
 player.run  = 3
-
 
 end
 
@@ -70,6 +67,6 @@ end
 function love.draw()
   map:draw()
   love.graphics.setColor(255, 255, 255, 255)
-love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
+  love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
 end
 end
