@@ -4,7 +4,7 @@ spawnpoint = {}
 
 
 function love.load(arg)
-map = sti("map/Livello Invisibile/invisibile.lua")
+map = sti("map/livello invisibile/invisibile.lua")
 
 
 player.posX = 10
