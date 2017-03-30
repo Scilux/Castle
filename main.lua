@@ -4,7 +4,7 @@ spawnpoint = {}
 
 
 function love.load(arg)
-map = sti("invisibile.lua")
+map = sti("assets/invisibile.lua")
 
 
 player.posX = 10
@@ -22,12 +22,6 @@ end
 
 function love.update(dt)
 
-  if
-love.keyboard.isDown("space") then
-player.move = player.run
-else
-player.move = player.walk
-end
 
 if
 love.keyboard.isDown("d") then
