@@ -64,7 +64,6 @@ player:addAnimation('walk-down', {
     }
 })
 
-player.x, player.y = love.graphics.getWidth() / 2, love.graphics.getHeight() / 2
 
 for k, object in pairs(map.objects) do
       if object.name == "spwanpoint" then
