@@ -5,10 +5,14 @@ spawnpoint = {}
 
 function love.load(arg)
 
+
 deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
 deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
 
-map = sti("assets/invisibile.lua")
+
+map = sti("map/livello invisibile/invisibile.lua")
+
+
 
 
 player.posX = 10
@@ -28,12 +32,6 @@ end
 
 function love.update(dt)
 
-  if
-love.keyboard.isDown("space") then
-player.move = player.run
-else
-player.move = player.walk
-end
 
 if
 love.keyboard.isDown("d") then
@@ -74,9 +72,6 @@ function love.keypressed(key, scancode, isrepeat)
     end
   end
 end
-
-
-
 
 
 function love.draw()
