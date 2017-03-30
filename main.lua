@@ -110,6 +110,30 @@ function love.update(dt)
     if(nextY >= 32 and nextY <= love.graphics.getHeight() - 32) then
       player.y = nextY
     end
+
+
+--[[local impassableZone
+    -- se alla fine di tutti i controlli 'canMove' sarà ancora 'true',
+  -- vorrà dire che è possibile muoversi nel punto desiderato
+  local canMove = true
+  for k, object in pairs(map.objects) do
+    if object.properties["unwalkable"] == true then
+      if ( nextX >= object.x and
+           nextX < object.x + object.width and
+           nextY >= object.y and
+           nextY < object.y + object.height ) then
+        canMove = false
+        break
+      end
+    end
+  end
+
+  -- se è possibile muoversi, aggiorna la posizione del personaggio
+  if(canMove) then
+    player.x = nextX
+    player.y = nextY
+  end
+]]--
     player:update(dt)
 
 
@@ -155,7 +179,7 @@ function love.draw()
 
    elseif (game.status == "play") then
      map:draw()
-     player:draw() -- disegno il personaggio con il pivot al suo centro
+     player:draw() 
    end
 
 end
