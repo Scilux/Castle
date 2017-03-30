@@ -103,7 +103,8 @@ if(game.status == "start") then
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 
-  -- map:draw()
+else
+  map:draw()
   --  love.graphics.setColor(255, 255, 255, 255)
   --  love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
 
