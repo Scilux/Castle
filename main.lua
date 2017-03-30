@@ -12,20 +12,21 @@ deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
 deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
 
 
+for k, object in pairs(map.objects) do
+    if object.name == "spawnpoint" then
+      spawnpoint.startX = object.x
+      spawnpoint.startY = object.y
+    end
+  end
 
-
-
-
-
-
-player.posX = 10
-player.posY = 10
+player.posX = spawnpoint.startX
+player.posY = spawnpoint.startY
 player.size = 30
 player.move = 1
 player.walk = 1
 player.run  = 3
 
-game = {}
+  game = {}
   game.status = "start"
 end
 
@@ -54,7 +55,7 @@ player.posY = player.posY + player.move
 end
 
 
-if
+--[[if
 player.posX < 0 then
 player.posX = 0
 
@@ -63,7 +64,7 @@ player.posX > love.graphics.getWidth() - player.size then
 player.posX = love.graphics.getWidth() - player.size
 
 
-end
+end]]--
 
 function love.keypressed(key, scancode, isrepeat)
 
@@ -103,10 +104,10 @@ if(game.status == "start") then
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 
-else
+elseif (game.status == "play") then
   map:draw()
-  --  love.graphics.setColor(255, 255, 255, 255)
-  --  love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
+  love.graphics.setColor(255, 255, 255, 255)
+  love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
 
 end
 end
