@@ -4,7 +4,7 @@ spawnpoint = {}
 
 
 function love.load(arg)
-map = sti("invisibile.lua")
+map = sti("assets/invisibile.lua")
 
 
 player.posX = 10
