@@ -55,9 +55,6 @@ end
 
 
 
-
-
-
 function love.draw()
   map:draw()
   love.graphics.setColor(255, 255, 255, 255)
