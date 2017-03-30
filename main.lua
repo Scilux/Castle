@@ -5,8 +5,6 @@ spawnpoint = {}
 
 function love.load(arg)
 
-
-
 map = sti("map/livello invisibile/invisibile.lua")
 
 
