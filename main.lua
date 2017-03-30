@@ -18,6 +18,8 @@ player.move = 1
 player.walk = 1
 player.run  = 3
 
+game = {}
+  game.status = "start"
 end
 
 
@@ -62,7 +64,16 @@ player.posX = love.graphics.getWidth() - player.size
 
 end
 
+function love.keypressed(key, scancode, isrepeat)
 
+  -- controlliamo in che stato di gioco siamo
+  if(game.status ~= "play") then
+    if(game.status == "start" and key == "space") then
+      game.status = "play"
+
+    end
+  end
+end
 
 
 
@@ -70,15 +81,18 @@ end
 
 function love.draw()
 
+if(game.status == "start") then
 
-  map:draw()
+  love.graphics.setColor(0, 0, 0, 0)
+  love.graphics.rectangle("fill", 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
+
   love.graphics.setColor(255, 255, 255, 255)
-  love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
-
   love.graphics.setFont(deutschfont)
   love.graphics.printf("Castle Master", 0, 75, love.graphics.getWidth(), "center")
+
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Start", 0, 200, love.graphics.getWidth(), "center")
+
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Livello 1", 0, 235, love.graphics.getWidth(), "center")
   love.graphics.setFont(deutschfont2)
@@ -87,7 +101,14 @@ function love.draw()
   love.graphics.printf("Livello 3", 0, 305, love.graphics.getWidth(), "center")
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Livello 4", 0, 340, love.graphics.getWidth(), "center")
+
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
+
+  -- map:draw()
+  --  love.graphics.setColor(255, 255, 255, 255)
+  --  love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
+
+end
 end
 end
