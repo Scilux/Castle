@@ -8,7 +8,7 @@ return {
   height = 32,
   tilewidth = 32,
   tileheight = 32,
-  nextobjectid = 19,
+  nextobjectid = 20,
   properties = {},
   tilesets = {
     {
@@ -207,6 +207,19 @@ return {
           shape = "rectangle",
           x = 288,
           y = 384,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 19,
+          name = "spwanpoint",
+          type = "",
+          shape = "rectangle",
+          x = 544,
+          y = 256,
           width = 32,
           height = 32,
           rotation = 0,
