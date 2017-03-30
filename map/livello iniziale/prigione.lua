@@ -102,7 +102,7 @@ return {
     {
       type = "objectgroup",
       name = "Livello di oggetti 1",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -120,7 +120,9 @@ return {
           height = 64,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 4,
@@ -133,7 +135,9 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 8,
@@ -146,7 +150,9 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 9,
@@ -154,12 +160,14 @@ return {
           type = "",
           shape = "rectangle",
           x = 320,
-          y = 352,
+          y = 351,
           width = 32,
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 14,
@@ -172,7 +180,9 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 15,
@@ -185,7 +195,9 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 16,
@@ -198,7 +210,9 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 17,
@@ -211,7 +225,9 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["unwalkable"] = true
+          }
         },
         {
           id = 19,
