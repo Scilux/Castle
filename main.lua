@@ -4,6 +4,10 @@ spawnpoint = {}
 
 
 function love.load(arg)
+
+deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
+deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
+
 map = sti("assets/invisibile.lua")
 
 
@@ -65,8 +69,25 @@ end
 
 
 function love.draw()
+
+
   map:draw()
   love.graphics.setColor(255, 255, 255, 255)
   love.graphics.rectangle("fill", player.posX, player.posY, player.size, player.size)
+
+  love.graphics.setFont(deutschfont)
+  love.graphics.printf("Castle Master", 0, 75, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Start", 0, 200, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Livello 1", 0, 235, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Livello 2", 0, 270, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Livello 3", 0, 305, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Livello 4", 0, 340, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 end
 end
