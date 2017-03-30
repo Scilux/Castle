@@ -22,12 +22,6 @@ end
 
 function love.update(dt)
 
-  if
-love.keyboard.isDown("space") then
-player.move = player.run
-else
-player.move = player.walk
-end
 
 if
 love.keyboard.isDown("d") then
@@ -57,9 +51,6 @@ player.posX = love.graphics.getWidth() - player.size
 
 
 end
-
-
-
 
 
 
