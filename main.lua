@@ -16,7 +16,7 @@ map = sti("map/livello iniziale/prigione.lua")
 deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
 deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
 
-tilesetlvl0 = love.graphics.newImage("map/livello iniziale/dungeon10.png")
+tilesetlvl0 = love.graphics.newImage("map/livello iniziale/dungeonex.png")
 
 local tileWidth = map.tilewidth
 local tileHeight = map.tileheight
@@ -222,7 +222,7 @@ function love.draw()
 
 
    elseif (game.status == "lvl1") then
-     map = sti("map/Livello Invisibile/invisibile.lua")
+     map = sti("map/mappa principale/mainmap.lua")
      map:draw()
      player:draw()
 

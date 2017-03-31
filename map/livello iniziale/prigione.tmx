@@ -124,7 +124,7 @@
  <objectgroup name="porta" visible="0">
   <object id="21" name="porta sopra" x="512" y="288" width="32" height="32">
    <properties>
-    <property name="tilex" type="int" value="11"/>
+    <property name="tilex" type="int" value="8"/>
     <property name="tiley" type="int" value="6"/>
    </properties>
   </object>

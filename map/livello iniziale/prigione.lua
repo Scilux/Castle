@@ -314,7 +314,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["tilex"] = 11,
+            ["tilex"] = 8,
             ["tiley"] = 6
           }
         },
