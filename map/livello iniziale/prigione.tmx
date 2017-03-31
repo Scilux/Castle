@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="19">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="20">
  <tileset firstgid="1" name="dungeon10" tilewidth="32" tileheight="32" tilecount="192" columns="16">
   <image source="dungeon10.png" width="512" height="384"/>
  </tileset>
@@ -43,13 +43,46 @@
 </data>
  </layer>
  <objectgroup name="Livello di oggetti 1">
-  <object id="1" name="Letto" x="608" y="224" width="64" height="64"/>
-  <object id="4" name="Secchio" x="512" y="224" width="32" height="32"/>
-  <object id="8" name="Calderone" x="384" y="256" width="32" height="32"/>
-  <object id="9" name="Sedia1" x="320" y="352" width="32" height="32"/>
-  <object id="14" name="Sedia2" x="288" y="320" width="32" height="32"/>
-  <object id="15" name="Sedia3" x="256" y="352" width="32" height="32"/>
-  <object id="16" name="Tavolo" x="288" y="352" width="32" height="32"/>
-  <object id="17" name="Sedia4" x="288" y="384" width="32" height="32"/>
+  <object id="1" name="Letto" x="608" y="224" width="64" height="64">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" name="Secchio" x="512" y="224" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="8" name="Calderone" x="384" y="256" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="9" name="Sedia1" x="320" y="351" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="14" name="Sedia2" x="288" y="320" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="15" name="Sedia3" x="256" y="352" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="16" name="Tavolo" x="288" y="352" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="17" name="Sedia4" x="288" y="384" width="32" height="32">
+   <properties>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="19" name="spwanpoint" x="544" y="256" width="32" height="32"/>
  </objectgroup>
 </map>
