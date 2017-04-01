@@ -17,6 +17,7 @@ map = sti("map/livello iniziale/prigione.lua")
 
 deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
 deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
+deutschfont3 = love.graphics.newFont("font/Deutsch.ttf", 75)
 
 tilesetlvl0 = love.graphics.newImage("map/livello iniziale/dungeonex.png")
 
@@ -164,6 +165,17 @@ local impassableZone
         break
       end
     end
+    if object.properties["action"] == true then
+      if ( nextX >= object.x + 32 and
+           nextX < object.x + object.width - 32 and
+           nextY >= object.y + 6 and
+           nextY < object.y + object.height - 48 ) then
+      love.graphics.setColor(255, 255, 255, 255)
+      love.graphics.setFont(deutschfont2)
+      love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
+      break
+    end
+    end
   end
 
 
@@ -182,14 +194,14 @@ function love.keypressed(key, scancode, isrepeat)
 
   -- controlliamo in che stato di gioco siamo
   if(game.status ~= "play") then
-    if(game.status == "start" and key == "0") then
-      game.status = "lvl0"
-    elseif(game.status == "start" and key == "1") then
-          game.status = "lvl1"
+    if(game.status == "start" and key == "1") then
+      game.status = "lvl1"
     elseif(game.status == "start" and key == "2") then
           game.status = "lvl2"
     elseif(game.status == "start" and key == "3") then
           game.status = "lvl3"
+    elseif(game.status == "start" and key == "4") then
+          game.status = "lvl4"
     end
   end
   if (key == "g") then
@@ -226,7 +238,7 @@ function love.draw()
      love.graphics.setFont(deutschfont2)
      love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 
-   elseif (game.status == "lvl0") then
+   elseif (game.status == "lvl1") then
      map:draw()
      player:draw()
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
@@ -239,6 +251,21 @@ function love.draw()
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 32, gratasotto.Y)
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 64, gratasotto.Y)
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)
+
+for k, object in pairs(map.objects) do
+     if object.properties["action"] == true then
+       if ( nextX >= object.x and
+            nextX < object.x + object.width and
+            nextY >= object.y + 6 and
+            nextY < object.y + object.height - 32) then
+       love.graphics.setColor(255, 255, 255, 255)
+       love.graphics.setFont(deutschfont3)
+       love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
+       break
+     end
+     end
+   end
+
      if (G) then
      love.graphics.draw(tilesetlvl0, portasopra.quad, portasopra.X, portasopra.Y)
      love.graphics.draw(tilesetlvl0, portasotto.quad, portasotto.X, portasotto.Y)

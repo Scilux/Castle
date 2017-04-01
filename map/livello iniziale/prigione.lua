@@ -184,6 +184,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["action"] = true,
             ["unwalkable"] = true
           }
         },
@@ -342,7 +343,7 @@ return {
           shape = "rectangle",
           x = 160,
           y = 96,
-          width = 96,
+          width = 112,
           height = 416,
           rotation = 0,
           visible = true,
@@ -356,11 +357,11 @@ return {
           type = "",
           shape = "rectangle",
           x = 160,
-          y = 416,
+          y = 403,
           width = 576,
-          height = 96,
+          height = 109,
           rotation = 0,
-          visible = false,
+          visible = true,
           properties = {
             ["unwalkable"] = true
           }
