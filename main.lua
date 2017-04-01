@@ -4,6 +4,8 @@ spawnpoint = {}
 game = {}
 portasopra = {}
 portasotto = {}
+gratasopra = {}
+gratasotto = {}
 G = true
 
 local sodapop = require 'assets/playerimages/sodapop'
@@ -30,12 +32,24 @@ local tileHeight = map.tileheight
     if object.name == "porta sopra" then
       portasopra.X = object.x
       portasopra.Y = object.y
-      portasopra.quad = love.graphics.newQuad(object.properties["tilex"] * tileWidth, object.properties["tiley"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
+      portasopra.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
+      portasopra.quadOpen = love.graphics.newQuad(object.properties["openX"] * tileWidth, object.properties["openY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
     end
     if object.name == "porta sotto" then
       portasotto.X = object.x
       portasotto.Y = object.y
-      portasotto.quad = love.graphics.newQuad(object.properties["tilex"] * tileWidth, object.properties["tiley"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
+      portasotto.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
+    end
+    if object.name == "Grata Sopra" then
+      gratasopra.X = object.x
+      gratasopra.Y = object.y
+      gratasopra.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
+
+    end
+    if object.name == "Grata Sotto" then
+      gratasotto.X = object.x
+      gratasotto.Y = object.y
+      gratasotto.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
 
     end
   end
@@ -215,10 +229,29 @@ function love.draw()
    elseif (game.status == "lvl0") then
      map:draw()
      player:draw()
+     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
+     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 64, gratasopra.Y)
+     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 96, gratasopra.Y)
+     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 128, gratasopra.Y)
+     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 160, gratasopra.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X - 64, gratasotto.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X, gratasotto.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 32, gratasotto.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 64, gratasotto.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)
      if (G) then
      love.graphics.draw(tilesetlvl0, portasopra.quad, portasopra.X, portasopra.Y)
      love.graphics.draw(tilesetlvl0, portasotto.quad, portasotto.X, portasotto.Y)
-   end
+   else
+     love.graphics.draw(tilesetlvl0, portasopra.quadOpen, portasopra.X, portasopra.Y)
+     for k, object in pairs(map.objects) do
+       if object.name == "porta" then
+         object.properties["unwalkable"] = false
+         break
+        end
+      end
+     end
+
 
 
    elseif (game.status == "lvl1") then

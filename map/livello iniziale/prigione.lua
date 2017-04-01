@@ -8,7 +8,7 @@ return {
   height = 32,
   tilewidth = 32,
   tileheight = 32,
-  nextobjectid = 28,
+  nextobjectid = 48,
   properties = {},
   tilesets = {
     {
@@ -289,6 +289,126 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 39,
+          name = "grata",
+          type = "",
+          shape = "rectangle",
+          x = 513,
+          y = 305,
+          width = 191,
+          height = 110,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 40,
+          name = "muro",
+          type = "",
+          shape = "rectangle",
+          x = 624,
+          y = 160,
+          width = 112,
+          height = 352,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 41,
+          name = "muro",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 96,
+          width = 576,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 42,
+          name = "muro",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 96,
+          width = 96,
+          height = 416,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 43,
+          name = "muro",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 416,
+          width = 576,
+          height = 96,
+          rotation = 0,
+          visible = false,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 44,
+          name = "grata",
+          type = "",
+          shape = "rectangle",
+          x = 430,
+          y = 160,
+          width = 96,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 45,
+          name = "grata",
+          type = "",
+          shape = "rectangle",
+          x = 429.5,
+          y = 305.5,
+          width = 116,
+          height = 111,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 46,
+          name = "Tavolo",
+          type = "",
+          shape = "rectangle",
+          x = 189,
+          y = 191,
+          width = 163,
+          height = 96,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
         }
       }
     },
@@ -312,10 +432,12 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          visible = true,
+          visible = false,
           properties = {
-            ["tilex"] = 8,
-            ["tiley"] = 6
+            ["openX"] = 8,
+            ["openY"] = 8,
+            ["tileX"] = 8,
+            ["tileY"] = 6
           }
         },
         {
@@ -328,10 +450,27 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
+          visible = false,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 7
+          }
+        },
+        {
+          id = 47,
+          name = "porta",
+          type = "",
+          shape = "rectangle",
+          x = 472,
+          y = 306,
+          width = 110,
+          height = 109,
+          rotation = 0,
           visible = true,
           properties = {
-            ["tilex"] = 8,
-            ["tiley"] = 7
+            ["tileX"] = 8,
+            ["tileY"] = 7,
+            ["unwalkable"] = true
           }
         }
       }
@@ -339,7 +478,7 @@ return {
     {
       type = "objectgroup",
       name = "Grata",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -348,7 +487,7 @@ return {
       objects = {
         {
           id = 27,
-          name = "",
+          name = "Grata Sopra",
           type = "",
           shape = "rectangle",
           x = 544,
@@ -357,7 +496,154 @@ return {
           height = 32,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 6
+          }
+        },
+        {
+          id = 30,
+          name = "Grata Sopra",
+          type = "",
+          shape = "rectangle",
+          x = 576,
+          y = 288,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 6
+          }
+        },
+        {
+          id = 31,
+          name = "Grata Sopra",
+          type = "",
+          shape = "rectangle",
+          x = 608,
+          y = 288,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 6
+          }
+        },
+        {
+          id = 32,
+          name = "Grata Sopra",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 288,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 6
+          }
+        },
+        {
+          id = 33,
+          name = "Grata Sopra",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 288,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 6
+          }
+        },
+        {
+          id = 34,
+          name = "Grata Sotto",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 320,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 7
+          }
+        },
+        {
+          id = 35,
+          name = "Grata Sotto",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 320,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 7
+          }
+        },
+        {
+          id = 36,
+          name = "Grata Sotto",
+          type = "",
+          shape = "rectangle",
+          x = 608,
+          y = 320,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 7
+          }
+        },
+        {
+          id = 37,
+          name = "Grata Sotto",
+          type = "",
+          shape = "rectangle",
+          x = 576,
+          y = 320,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 7
+          }
+        },
+        {
+          id = 38,
+          name = "Grata Sotto",
+          type = "",
+          shape = "rectangle",
+          x = 544,
+          y = 320,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["tileX"] = 8,
+            ["tileY"] = 7
+          }
         }
       }
     }
