@@ -56,69 +56,78 @@ local tileHeight = map.tileheight
   end
 
 
-player.posX = spawnpoint.startX
-player.posY = spawnpoint.startY
+player.x = spawnpoint.startX
+player.y = spawnpoint.startY
 
-playerSpritesheet = love.graphics.newImage("assets/playerimages/player.png")
+playerSpritesheet = love.graphics.newImage("assets/DawnLike/Characters/Player1copia.png")
 
-posX, posY = 0, 0
+--posX, posY = 0, 0
 speed = 2
 
 player = sodapop.newAnimatedSprite()
 
   -- definisco le verie animazioni
-player:addAnimation('walk-right', {
+--[[player:addAnimation('walk-right', {
     image = playerSpritesheet, -- spritesheet da cui prendere le immagini
-    frameWidth = 64,             -- larghezza di uno sprite
-    frameHeight = 64,            -- altezza di uno sprite
+    frameWidth = 16,             -- larghezza di uno sprite
+    frameHeight = 16,            -- altezza di uno sprite
     frames = {                   -- definizione dei frame e della loro durata
-      {2, 12, 9, 12, .1}
+      {1, 12, 8, 12, .5}
     }
 })
 player:addAnimation('walk-left', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 10, 9, 10, .1}
+      {1, 13, 8, 13, .5}
     }
 })
 player:addAnimation('walk-up', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 9, 9, 9, .1}
+      {1, 15, 8, 15, .5}
     }
 })
 player:addAnimation('walk-down', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 11, 9, 11, .1}
+      {1, 8, 8, 8, .5}
+    }
+})]]--
+player:addAnimation('walk-left', {
+    image = playerSpritesheet,
+    frameWidth = 16,
+    frameHeight = 16,
+    frames = {
+      {1, 12, 8, 12, .2}
+    }
+})
+player:addAnimation('walk-right', {
+    image = playerSpritesheet,
+    frameWidth = 16,
+    frameHeight = 16,
+    frames = {
+      {1, 13, 8, 13, .2}
     }
 })
 player:addAnimation('interaction', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 6, 8, 6, .1}
+      {2, 6, 7, 6, .1}
     }
 })
 
 
-  for k, object in pairs(map.objects) do
-      if object.name == "spwanpoint" then
-        spawnpoint.startX = object.x
-        spawnpoint.startY = object.y
-      end
-    end
-
-game.status = "start"
 player.x = spawnpoint.startX
 player.y = spawnpoint.startY
+game.status = "start"
 
 
 end
@@ -132,10 +141,10 @@ function love.update(dt)
     -- le condizioni si trovano tutte in un unico controllo
     -- perché non abbiamo un movimento diagonale
     if(love.keyboard.isDown("up")) then
-      player:switch('walk-up', true)
+      player:switch('walk-left', true)
       nextY = nextY - speed
     elseif (love.keyboard.isDown("down")) then
-      player:switch('walk-down', true)
+      player:switch('walk-right', true)
       nextY = nextY + speed
     elseif (love.keyboard.isDown("left")) then
       player:switch('walk-left', true)
@@ -144,7 +153,7 @@ function love.update(dt)
       player:switch('walk-right', true)
       nextX = nextX + speed
     else
-      player:goToFrame(8)
+      player:goToFrame(2)
     end
 
 
@@ -157,8 +166,8 @@ local impassableZone
   for k, object in pairs(map.objects) do
     if object.properties["unwalkable"] == true then
 
-      if ( nextX >= object.x and
-           nextX < object.x + object.width and
+      if ( nextX >= object.x + 32 and
+           nextX < object.x + object.width - 32 and
            nextY >= object.y + 6 and
            nextY < object.y + object.height - 48 ) then
         canMove = false
@@ -186,6 +195,7 @@ local impassableZone
     player.y = nextY
   end
 
+
     player:update(dt)
 
 end
@@ -194,6 +204,7 @@ function love.keypressed(key, scancode, isrepeat)
 
   -- controlliamo in che stato di gioco siamo
   if(game.status ~= "play") then
+
     if(game.status == "start" and key == "1") then
       game.status = "lvl1"
     elseif(game.status == "start" and key == "2") then
@@ -202,12 +213,13 @@ function love.keypressed(key, scancode, isrepeat)
           game.status = "lvl3"
     elseif(game.status == "start" and key == "4") then
           game.status = "lvl4"
+    elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
+          game.status = "start"
     end
   end
   if (key == "g") then
     G = false
   end
-
 
 
   end
@@ -239,6 +251,7 @@ function love.draw()
      love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 
    elseif (game.status == "lvl1") then
+     map = sti("map/livello iniziale/prigione2.lua")
      map:draw()
      player:draw()
      --[[love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
@@ -266,7 +279,7 @@ for k, object in pairs(map.objects) do
      end
    end
 
-     if (G) then
+     --[[if (G) then
      love.graphics.draw(tilesetlvl0, portasopra.quad, portasopra.X, portasopra.Y)
      love.graphics.draw(tilesetlvl0, portasotto.quad, portasotto.X, portasotto.Y)
    else
@@ -277,15 +290,29 @@ for k, object in pairs(map.objects) do
          break
         end
       end
-     end
+    end]]--
 
 
 
-   elseif (game.status == "lvl1") then
+  elseif (game.status == "lvl2") then
      map = sti("map/mappa principale/mainmap.lua")
-     map:draw()
+     map:draw("center")
      player:draw()
 
-   end
+
+
+ elseif (game.status == "lvl3") then
+    map = sti("map/Livello Invisibile/invisibile.lua")
+    map:draw("center")
+    for k, object in pairs(map.objects) do
+        if object.name == "spawnpoint" then
+          player.x = object.x
+          player.y = object.y
+        end
+      end
+
+    player:draw()
+
+  end
 
 end
