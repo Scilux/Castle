@@ -340,13 +340,16 @@ for k, object in pairs(map.objects) do
     map = sti("map/Livello Invisibile/invisibile.lua")
     map:draw("center")
     for k, object in pairs(map.objects) do
-        if object.name == "spawn" then
+      print(object.name)
+        if object.name == "spwan" then
           spawnpoint.startX = object.x
           spawnpoint.startY = object.y
+          --print(object.x)
         end
       end
+      
 
-      print(spawnpoint.startX, spawnpoint.startY)
+      --print(spawnpoint.startX, spawnpoint.startY)
 
 player:draw()
 
