@@ -42,7 +42,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="Livello di oggetti 1" visible="0">
+ <objectgroup name="Livello di oggetti 1">
   <object id="1" name="Letto" x="608" y="224" width="64" height="64">
    <properties>
     <property name="unwalkable" type="bool" value="true"/>
