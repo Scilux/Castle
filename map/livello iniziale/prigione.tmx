@@ -78,8 +78,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+
  <objectgroup name="Livello di oggetti 1" visible="0">
   <object id="1" name="Letto" x="576" y="192" width="128" height="128">
+
    <properties>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
