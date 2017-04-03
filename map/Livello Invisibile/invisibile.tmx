@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" nextobjectid="57">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" nextobjectid="75">
  <tileset firstgid="1" name="Wall" tilewidth="16" tileheight="16" tilecount="1020" columns="20">
   <image source="../../assets/DawnLike/Objects/Wall.png" width="320" height="816"/>
  </tileset>
@@ -27,7 +27,7 @@
 261,1210,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1211,1212,261,
 261,1231,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1232,1233,261,
 261,1252,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1232,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1253,1254,261,
-261,1904,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1232,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1906,261,
+261,1904,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1255,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1905,1906,261,
 261,1912,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1914,261,
 261,1912,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1914,261,
 261,1912,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1913,1914,261,
@@ -134,7 +134,7 @@
   <object id="28" name="invisiblefloor" x="192" y="80" width="16" height="32"/>
   <object id="33" name="spawnfloor" x="96" y="368" width="368" height="16">
    <properties>
-    <property name="spawnback" type="bool" value="false"/>
+    <property name="spawnback" type="bool" value="true"/>
    </properties>
   </object>
   <object id="34" name="spwanfloor" x="96" y="304" width="16" height="64">
@@ -142,16 +142,9 @@
     <property name="spawnback" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="35" x="112" y="304" width="80" height="16"/>
-  <object id="36" x="176" y="256" width="16" height="48"/>
-  <object id="37" x="192" y="256" width="224" height="16"/>
-  <object id="38" x="400" y="128" width="16" height="128"/>
-  <object id="39" x="96" y="128" width="304" height="16"/>
-  <object id="40" x="96" y="96" width="64" height="32"/>
-  <object id="41" x="208" y="80" width="32" height="48"/>
   <object id="43" name="spawnfloor" x="16" y="368" width="64" height="16">
    <properties>
-    <property name="spawnback" type="bool" value="false"/>
+    <property name="spawnback" type="bool" value="true"/>
    </properties>
   </object>
   <object id="44" name="spawnfloor" x="64" y="272" width="16" height="96">
@@ -166,13 +159,9 @@
   </object>
   <object id="46" name="spwanfloor" x="144" y="224" width="16" height="48">
    <properties>
-    <property name="spawnback" type="bool" value="false"/>
+    <property name="spawnback" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="47" x="144" y="224" width="240" height="16"/>
-  <object id="49" x="368" y="160" width="16" height="64"/>
-  <object id="50" x="64" y="160" width="320" height="16"/>
-  <object id="51" x="64" y="80" width="16" height="96"/>
   <object id="53" name="spwan" x="112" y="416" width="16" height="16"/>
   <object id="55" name="wall" x="0" y="64" width="192" height="16">
    <properties>
@@ -182,6 +171,61 @@
   <object id="56" name="wall" x="208" y="64" width="256" height="16">
    <properties>
     <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="58" name="spawnfloor" x="176" y="256" width="224" height="16">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="59" name="spawnfloor" x="160" y="224" width="224" height="16">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="60" name="spawnfloor" x="80" y="160" width="304" height="16">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="61" name="spawnfloor" x="112" y="128" width="288" height="16">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="64" name="spawnfloor" x="64" y="80" width="16" height="96">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="65" name="spawnfloor" x="96" y="96" width="16" height="48">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="66" name="spawnfloor" x="112" y="96" width="48" height="32">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="67" name="spawnfloor" x="176" y="80" width="16" height="32">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="68" name="spawnfloor" x="208" y="80" width="16" height="48">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="69" name="spawnfloor" x="400" y="128" width="16" height="144">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="73" name="spawnfloor" x="368" y="176" width="16" height="48">
+   <properties>
+    <property name="spawnback" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>
