@@ -7,6 +7,8 @@ portasotto = {}
 gratasopra = {}
 gratasotto = {}
 LVL = 0
+doMove = true
+
 
 local sodapop = require 'assets/playerimages/sodapop'
 
@@ -140,19 +142,24 @@ function love.update(dt)
   nextX, nextY = player.x, player.y
     -- le condizioni si trovano tutte in un unico controllo
     -- perché non abbiamo un movimento diagonale
-    if(love.keyboard.isDown("up")) then
-      player:switch('walk-left', true)
-      nextY = nextY - speed
-    elseif (love.keyboard.isDown("down")) then
-      player:switch('walk-right', true)
-      nextY = nextY + speed
-    elseif (love.keyboard.isDown("left")) then
-      player:switch('walk-left', true)
-      nextX = nextX - speed
-    elseif (love.keyboard.isDown("right")) then
-      player:switch('walk-right', true)
-      nextX = nextX + speed
-    else
+    if (doMove) then
+      if(love.keyboard.isDown("up")) then
+        player:switch('walk-left', true)
+        nextY = nextY - speed
+      elseif (love.keyboard.isDown("down")) then
+        player:switch('walk-right', true)
+        nextY = nextY + speed
+      elseif (love.keyboard.isDown("left")) then
+        player:switch('walk-left', true)
+        nextX = nextX - speed
+      elseif (love.keyboard.isDown("right")) then
+        player:switch('walk-right', true)
+        nextX = nextX + speed
+      else
+        player:goToFrame(2)
+      end
+
+    elseif (not doMove) then
       player:goToFrame(2)
     end
 
@@ -162,7 +169,7 @@ function love.update(dt)
 local impassableZone
     -- se alla fine di tutti i controlli 'canMove' sarà ancora 'true',
   -- vorrà dire che è possibile muoversi nel punto desiderato
-  local canMove = true
+  canMove = true
   for k, object in pairs(map.objects) do
     if object.properties["unwalkable"] == true then
 
@@ -236,9 +243,6 @@ function love.keypressed(key, scancode, isrepeat)
         game.status = "start"
     end
   end
-  if (key == "g") then
-    G = false
-  end
 
 
   end
@@ -249,6 +253,7 @@ function love.keypressed(key, scancode, isrepeat)
 function love.draw()
 
    if(game.status == "start") then
+     doMove = false
 
      love.graphics.setColor(255, 255, 255, 255)
      love.graphics.setFont(deutschfont)
@@ -270,6 +275,7 @@ function love.draw()
      love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 
    elseif (game.status == "lvl1") then
+     doMove = true
      map = sti("map/livello iniziale/prigione2.lua")
      map:draw()
      player:draw()
@@ -314,6 +320,7 @@ for k, object in pairs(map.objects) do
 
 
   elseif (game.status == "lvl2") then
+    doMove = true
      map = sti("map/mappa principale/mainmap.lua")
      map:draw("center")
      player:draw()
@@ -321,6 +328,7 @@ for k, object in pairs(map.objects) do
 
 
  elseif (game.status == "lvl3") then
+   doMove = true
     map = sti("map/Livello Invisibile/invisibile.lua")
     map:draw("center")
     for k, object in pairs(map.objects) do
@@ -336,14 +344,15 @@ for k, object in pairs(map.objects) do
 elseif (game.status == "pause") then
   map:draw()
   player:draw()
+  doMove = false
   love.graphics.setColor(255, 255, 255, 255)
   love.graphics.setFont(deutschfont)
   love.graphics.printf("Castle Master", 0, 75, love.graphics.getWidth(), "center")
-
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Premere 0 per tornare al menu principale", 0, 235, love.graphics.getWidth(), "center")
   love.graphics.setFont(deutschfont2)
   love.graphics.printf("Premere P per tornare al gioco", 0, 305, love.graphics.getWidth(), "center")
+
 
 
  end
