@@ -13,7 +13,7 @@ local sodapop = require 'assets/playerimages/sodapop'
 function love.load(arg)
 
 
-map = sti("map/livello iniziale/prigione.lua")
+map = sti("map/livello iniziale/prigione2.lua")
 
 deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
 deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
@@ -30,7 +30,7 @@ local tileHeight = map.tileheight
       spawnpoint.startX = object.x
       spawnpoint.startY = object.y
     end
-    if object.name == "porta sopra" then
+    --[[if object.name == "porta sopra" then
       portasopra.X = object.x
       portasopra.Y = object.y
       portasopra.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
@@ -52,7 +52,7 @@ local tileHeight = map.tileheight
       gratasotto.Y = object.y
       gratasotto.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
 
-    end
+    end]]--
   end
 
 
@@ -157,8 +157,8 @@ local impassableZone
   for k, object in pairs(map.objects) do
     if object.properties["unwalkable"] == true then
 
-      if ( nextX >= object.x + 32 and
-           nextX < object.x + object.width - 32 and
+      if ( nextX >= object.x and
+           nextX < object.x + object.width and
            nextY >= object.y + 6 and
            nextY < object.y + object.height - 48 ) then
         canMove = false
@@ -241,7 +241,7 @@ function love.draw()
    elseif (game.status == "lvl1") then
      map:draw()
      player:draw()
-     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
+     --[[love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 64, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 96, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 128, gratasopra.Y)
@@ -250,7 +250,7 @@ function love.draw()
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X, gratasotto.Y)
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 32, gratasotto.Y)
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 64, gratasotto.Y)
-     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)]]--
 
 for k, object in pairs(map.objects) do
      if object.properties["action"] == true then
