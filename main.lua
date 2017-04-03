@@ -6,7 +6,7 @@ portasopra = {}
 portasotto = {}
 gratasopra = {}
 gratasotto = {}
-G = true
+LVL = 0
 
 local sodapop = require 'assets/playerimages/sodapop'
 
@@ -207,14 +207,33 @@ function love.keypressed(key, scancode, isrepeat)
 
     if(game.status == "start" and key == "1") then
       game.status = "lvl1"
+      LVL = 1
     elseif(game.status == "start" and key == "2") then
           game.status = "lvl2"
+          LVL = 2
     elseif(game.status == "start" and key == "3") then
           game.status = "lvl3"
+          LVL = 3
     elseif(game.status == "start" and key == "4") then
           game.status = "lvl4"
+          LVL = 4
     elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
           game.status = "start"
+          LVL = 0
+    elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "p") then
+          game.status = "pause"
+    elseif(game.status == "pause" and key == "p") then
+          if (LVL == 1) then
+            game.status = "lvl1"
+          elseif (LVL == 2) then
+            game.status = "lvl2"
+          elseif (LVL == 3) then
+            game.status = "lvl3"
+          elseif (LVL == 4) then
+            game.status = "lvl4"
+          end
+      elseif(game.status == "pause" and key == "0") then
+        game.status = "start"
     end
   end
   if (key == "g") then
@@ -313,6 +332,20 @@ for k, object in pairs(map.objects) do
 
     player:draw()
 
-  end
+
+elseif (game.status == "pause") then
+  map:draw()
+  player:draw()
+  love.graphics.setColor(255, 255, 255, 255)
+  love.graphics.setFont(deutschfont)
+  love.graphics.printf("Castle Master", 0, 75, love.graphics.getWidth(), "center")
+
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Premere 0 per tornare al menu principale", 0, 235, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Premere P per tornare al gioco", 0, 305, love.graphics.getWidth(), "center")
+
+
+ end
 
 end
