@@ -28,7 +28,7 @@ local tileHeight = map.tileheight
 
 
   for k, object in pairs(map.objects) do
-    if object.name == "spawnpoint" then
+    if object.name == "spawn" then
       spawnpoint.startX = object.x
       spawnpoint.startY = object.y
     end
@@ -63,7 +63,7 @@ player.y = spawnpoint.startY
 
 playerSpritesheet = love.graphics.newImage("assets/DawnLike/Characters/Player1copia.png")
 
---posX, posY = 0, 0
+--player.x, player.y = 10, 10
 speed = 2
 
 player = sodapop.newAnimatedSprite()
@@ -139,6 +139,7 @@ end
 function love.update(dt)
 
 
+
   nextX, nextY = player.x, player.y
     -- le condizioni si trovano tutte in un unico controllo
     -- perché non abbiamo un movimento diagonale
@@ -200,6 +201,13 @@ local impassableZone
   end
   if(nextY >= 32 and nextY <= love.graphics.getHeight() - 32 and canMove) then
     player.y = nextY
+  end
+
+  for k, object in pairs(map.objects) do
+    if object.name == "spawn" then
+      spawnpoint.startX = object.x
+      spawnpoint.startY = object.y
+    end
   end
 
 
@@ -332,14 +340,15 @@ for k, object in pairs(map.objects) do
     map = sti("map/Livello Invisibile/invisibile.lua")
     map:draw("center")
     for k, object in pairs(map.objects) do
-        if object.name == "spawnpoint" then
-          player.x = object.x
-          player.y = object.y
+        if object.name == "spawn" then
+          spawnpoint.startX = object.x
+          spawnpoint.startY = object.y
         end
       end
 
-    player:draw()
+      print(spawnpoint.startX, spawnpoint.startY)
 
+player:draw()
 
 elseif (game.status == "pause") then
   map:draw()
