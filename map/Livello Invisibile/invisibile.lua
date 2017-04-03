@@ -8,7 +8,7 @@ return {
   height = 30,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 55,
+  nextobjectid = 75,
   properties = {},
   tilesets = {
     {
@@ -164,7 +164,7 @@ return {
         261, 1210, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1211, 1212, 261,
         261, 1231, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1232, 1233, 261,
         261, 1252, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1232, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1253, 1254, 261,
-        261, 1904, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1232, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1906, 261,
+        261, 1904, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1255, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1905, 1906, 261,
         261, 1912, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1914, 261,
         261, 1912, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1914, 261,
         261, 1912, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1913, 1914, 261,
@@ -506,7 +506,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = false
+            ["spawnback"] = true
           }
         },
         {
@@ -525,97 +525,6 @@ return {
           }
         },
         {
-          id = 35,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 112,
-          y = 304,
-          width = 80,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 36,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 176,
-          y = 256,
-          width = 16,
-          height = 48,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 37,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 192,
-          y = 256,
-          width = 224,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 38,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 128,
-          width = 16,
-          height = 128,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 39,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 96,
-          y = 128,
-          width = 304,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 40,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 96,
-          y = 96,
-          width = 64,
-          height = 32,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 41,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 208,
-          y = 80,
-          width = 32,
-          height = 48,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 43,
           name = "spawnfloor",
           type = "",
@@ -627,7 +536,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = false
+            ["spawnback"] = true
           }
         },
         {
@@ -672,60 +581,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = false
+            ["spawnback"] = true
           }
-        },
-        {
-          id = 47,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 144,
-          y = 224,
-          width = 240,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 49,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 368,
-          y = 160,
-          width = 16,
-          height = 64,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 50,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 64,
-          y = 160,
-          width = 320,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 51,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 64,
-          y = 80,
-          width = 16,
-          height = 96,
-          rotation = 0,
-          visible = true,
-          properties = {}
         },
         {
           id = 53,
@@ -739,6 +596,201 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 55,
+          name = "wall",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 64,
+          width = 192,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 56,
+          name = "wall",
+          type = "",
+          shape = "rectangle",
+          x = 208,
+          y = 64,
+          width = 256,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 58,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 176,
+          y = 256,
+          width = 224,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 59,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 224,
+          width = 224,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 60,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 160,
+          width = 304,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 61,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 112,
+          y = 128,
+          width = 288,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 64,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 64,
+          y = 80,
+          width = 16,
+          height = 96,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 65,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 96,
+          y = 96,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 66,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 112,
+          y = 96,
+          width = 48,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 67,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 176,
+          y = 80,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 68,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 208,
+          y = 80,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 69,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 128,
+          width = 16,
+          height = 144,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
+        },
+        {
+          id = 73,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 368,
+          y = 176,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = true
+          }
         }
       }
     }
