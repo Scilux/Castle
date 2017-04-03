@@ -102,7 +102,7 @@ return {
     {
       type = "objectgroup",
       name = "Livello di oggetti 1",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
