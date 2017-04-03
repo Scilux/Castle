@@ -162,7 +162,7 @@
     <property name="spawnback" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="53" name="spwan" x="112" y="416" width="16" height="16"/>
+  <object id="53" name="spawnpoint" x="112" y="416" width="16" height="16"/>
   <object id="55" name="wall" x="0" y="64" width="192" height="16">
    <properties>
     <property name="unwalkable" type="bool" value="true"/>

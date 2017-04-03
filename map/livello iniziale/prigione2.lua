@@ -331,7 +331,7 @@ return {
         },
         {
           id = 21,
-          name = "spawnpoint",
+          name = "spawn",
           type = "",
           shape = "rectangle",
           x = 416,
