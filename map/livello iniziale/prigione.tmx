@@ -78,10 +78,20 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+<<<<<<< Updated upstream
 
  <objectgroup name="Livello di oggetti 1" visible="0">
   <object id="1" name="Letto" x="576" y="192" width="128" height="128">
 
+=======
+<<<<<<< HEAD
+ <objectgroup name="Livello di oggetti 1">
+  <object id="1" name="Letto" x="608" y="224" width="64" height="64">
+=======
+ <objectgroup name="Livello di oggetti 1" visible="0">
+  <object id="1" name="Letto" x="576" y="192" width="128" height="128">
+>>>>>>> master
+>>>>>>> Stashed changes
    <properties>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
