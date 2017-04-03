@@ -170,9 +170,9 @@ local impassableZone
            nextX < object.x + object.width - 32 and
            nextY >= object.y + 6 and
            nextY < object.y + object.height - 48 ) then
-      love.graphics.setColor(255, 255, 255, 255)
-      love.graphics.setFont(deutschfont2)
-      love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
+      --love.graphics.setColor(255, 255, 255, 255)
+      --love.graphics.setFont(deutschfont2)
+      --love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
       break
     end
     end
