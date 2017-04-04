@@ -6,14 +6,16 @@ portasopra = {}
 portasotto = {}
 gratasopra = {}
 gratasotto = {}
-G = true
+LVL = 0
+doMove = true
+
 
 local sodapop = require 'assets/playerimages/sodapop'
 
 function love.load(arg)
 
 
-map = sti("map/livello iniziale/prigione.lua")
+map = sti("map/livello iniziale/prigione2.lua")
 
 deutschfont = love.graphics.newFont("font/Deutsch.ttf", 100)
 deutschfont2 = love.graphics.newFont("font/Deutsch.ttf", 25)
@@ -26,11 +28,11 @@ local tileHeight = map.tileheight
 
 
   for k, object in pairs(map.objects) do
-    if object.name == "spawnpoint" then
+    if object.name == "spawn" then
       spawnpoint.startX = object.x
       spawnpoint.startY = object.y
     end
-    if object.name == "porta sopra" then
+    --[[if object.name == "porta sopra" then
       portasopra.X = object.x
       portasopra.Y = object.y
       portasopra.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
@@ -52,73 +54,82 @@ local tileHeight = map.tileheight
       gratasotto.Y = object.y
       gratasotto.quad = love.graphics.newQuad(object.properties["tileX"] * tileWidth, object.properties["tileY"] * tileHeight, tileWidth, tileHeight, tilesetlvl0:getDimensions())
 
-    end
+    end]]--
   end
 
 
-player.posX = spawnpoint.startX
-player.posY = spawnpoint.startY
+player.x = spawnpoint.startX
+player.y = spawnpoint.startY
 
-playerSpritesheet = love.graphics.newImage("assets/playerimages/player.png")
+playerSpritesheet = love.graphics.newImage("assets/DawnLike/Characters/Player1copia.png")
 
-posX, posY = 0, 0
+--player.x, player.y = 10, 10
 speed = 2
 
 player = sodapop.newAnimatedSprite()
 
   -- definisco le verie animazioni
-player:addAnimation('walk-right', {
+--[[player:addAnimation('walk-right', {
     image = playerSpritesheet, -- spritesheet da cui prendere le immagini
-    frameWidth = 64,             -- larghezza di uno sprite
-    frameHeight = 64,            -- altezza di uno sprite
+    frameWidth = 16,             -- larghezza di uno sprite
+    frameHeight = 16,            -- altezza di uno sprite
     frames = {                   -- definizione dei frame e della loro durata
-      {2, 12, 9, 12, .1}
+      {1, 12, 8, 12, .5}
     }
 })
 player:addAnimation('walk-left', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 10, 9, 10, .1}
+      {1, 13, 8, 13, .5}
     }
 })
 player:addAnimation('walk-up', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 9, 9, 9, .1}
+      {1, 15, 8, 15, .5}
     }
 })
 player:addAnimation('walk-down', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 11, 9, 11, .1}
+      {1, 8, 8, 8, .5}
+    }
+})]]--
+player:addAnimation('walk-left', {
+    image = playerSpritesheet,
+    frameWidth = 16,
+    frameHeight = 16,
+    frames = {
+      {1, 12, 8, 12, .2}
+    }
+})
+player:addAnimation('walk-right', {
+    image = playerSpritesheet,
+    frameWidth = 16,
+    frameHeight = 16,
+    frames = {
+      {1, 13, 8, 13, .2}
     }
 })
 player:addAnimation('interaction', {
     image = playerSpritesheet,
-    frameWidth = 64,
-    frameHeight = 64,
+    frameWidth = 16,
+    frameHeight = 16,
     frames = {
-      {2, 6, 8, 6, .1}
+      {2, 6, 7, 6, .1}
     }
 })
 
 
-  for k, object in pairs(map.objects) do
-      if object.name == "spwanpoint" then
-        spawnpoint.startX = object.x
-        spawnpoint.startY = object.y
-      end
-    end
-
-game.status = "start"
 player.x = spawnpoint.startX
 player.y = spawnpoint.startY
+game.status = "start"
 
 
 end
@@ -128,23 +139,29 @@ end
 function love.update(dt)
 
 
+
   nextX, nextY = player.x, player.y
     -- le condizioni si trovano tutte in un unico controllo
     -- perché non abbiamo un movimento diagonale
-    if(love.keyboard.isDown("up")) then
-      player:switch('walk-up', true)
-      nextY = nextY - speed
-    elseif (love.keyboard.isDown("down")) then
-      player:switch('walk-down', true)
-      nextY = nextY + speed
-    elseif (love.keyboard.isDown("left")) then
-      player:switch('walk-left', true)
-      nextX = nextX - speed
-    elseif (love.keyboard.isDown("right")) then
-      player:switch('walk-right', true)
-      nextX = nextX + speed
-    else
-      player:goToFrame(8)
+    if (doMove) then
+      if(love.keyboard.isDown("up")) then
+        player:switch('walk-left', true)
+        nextY = nextY - speed
+      elseif (love.keyboard.isDown("down")) then
+        player:switch('walk-right', true)
+        nextY = nextY + speed
+      elseif (love.keyboard.isDown("left")) then
+        player:switch('walk-left', true)
+        nextX = nextX - speed
+      elseif (love.keyboard.isDown("right")) then
+        player:switch('walk-right', true)
+        nextX = nextX + speed
+      else
+        player:goToFrame(2)
+      end
+
+    elseif (not doMove) then
+      player:goToFrame(2)
     end
 
 
@@ -153,7 +170,7 @@ function love.update(dt)
 local impassableZone
     -- se alla fine di tutti i controlli 'canMove' sarà ancora 'true',
   -- vorrà dire che è possibile muoversi nel punto desiderato
-  local canMove = true
+  canMove = true
   for k, object in pairs(map.objects) do
     if object.properties["unwalkable"] == true then
 
@@ -170,9 +187,9 @@ local impassableZone
            nextX < object.x + object.width - 32 and
            nextY >= object.y + 6 and
            nextY < object.y + object.height - 48 ) then
-      love.graphics.setColor(255, 255, 255, 255)
-      love.graphics.setFont(deutschfont2)
-      love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
+      --love.graphics.setColor(255, 255, 255, 255)
+      --love.graphics.setFont(deutschfont2)
+      --love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
       break
     end
     end
@@ -186,6 +203,14 @@ local impassableZone
     player.y = nextY
   end
 
+  for k, object in pairs(map.objects) do
+    if object.name == "spawn" then
+      spawnpoint.startX = object.x
+      spawnpoint.startY = object.y
+    end
+  end
+
+
     player:update(dt)
 
 end
@@ -194,20 +219,38 @@ function love.keypressed(key, scancode, isrepeat)
 
   -- controlliamo in che stato di gioco siamo
   if(game.status ~= "play") then
+
     if(game.status == "start" and key == "1") then
       game.status = "lvl1"
+      LVL = 1
     elseif(game.status == "start" and key == "2") then
           game.status = "lvl2"
+          LVL = 2
     elseif(game.status == "start" and key == "3") then
           game.status = "lvl3"
+          LVL = 3
     elseif(game.status == "start" and key == "4") then
           game.status = "lvl4"
+          LVL = 4
+    elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
+          game.status = "start"
+          LVL = 0
+    elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "p") then
+          game.status = "pause"
+    elseif(game.status == "pause" and key == "p") then
+          if (LVL == 1) then
+            game.status = "lvl1"
+          elseif (LVL == 2) then
+            game.status = "lvl2"
+          elseif (LVL == 3) then
+            game.status = "lvl3"
+          elseif (LVL == 4) then
+            game.status = "lvl4"
+          end
+      elseif(game.status == "pause" and key == "0") then
+        game.status = "start"
     end
   end
-  if (key == "g") then
-    G = false
-  end
-
 
 
   end
@@ -218,6 +261,7 @@ function love.keypressed(key, scancode, isrepeat)
 function love.draw()
 
    if(game.status == "start") then
+     doMove = false
 
      love.graphics.setColor(255, 255, 255, 255)
      love.graphics.setFont(deutschfont)
@@ -239,9 +283,11 @@ function love.draw()
      love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
 
    elseif (game.status == "lvl1") then
+     doMove = true
+     map = sti("map/livello iniziale/prigione2.lua")
      map:draw()
      player:draw()
-     love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
+     --[[love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 64, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 96, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 128, gratasopra.Y)
@@ -250,7 +296,7 @@ function love.draw()
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X, gratasotto.Y)
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 32, gratasotto.Y)
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 64, gratasotto.Y)
-     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)
+     love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)]]--
 
 for k, object in pairs(map.objects) do
      if object.properties["action"] == true then
@@ -266,7 +312,7 @@ for k, object in pairs(map.objects) do
      end
    end
 
-     if (G) then
+     --[[if (G) then
      love.graphics.draw(tilesetlvl0, portasopra.quad, portasopra.X, portasopra.Y)
      love.graphics.draw(tilesetlvl0, portasotto.quad, portasotto.X, portasotto.Y)
    else
@@ -277,15 +323,50 @@ for k, object in pairs(map.objects) do
          break
         end
       end
-     end
+    end]]--
 
 
 
-   elseif (game.status == "lvl1") then
+  elseif (game.status == "lvl2") then
+    doMove = true
      map = sti("map/mappa principale/mainmap.lua")
-     map:draw()
+     map:draw("center")
      player:draw()
 
-   end
+
+
+ elseif (game.status == "lvl3") then
+   doMove = true
+    map = sti("map/Livello Invisibile/invisibile.lua")
+    map:draw("center")
+    for k, object in pairs(map.objects) do
+      print(object.name)
+        if object.name == "spwan" then
+          spawnpoint.startX = object.x
+          spawnpoint.startY = object.y
+          --print(object.x)
+        end
+      end
+      
+
+      --print(spawnpoint.startX, spawnpoint.startY)
+
+player:draw()
+
+elseif (game.status == "pause") then
+  map:draw()
+  player:draw()
+  doMove = false
+  love.graphics.setColor(255, 255, 255, 255)
+  love.graphics.setFont(deutschfont)
+  love.graphics.printf("Castle Master", 0, 75, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Premere 0 per tornare al menu principale", 0, 235, love.graphics.getWidth(), "center")
+  love.graphics.setFont(deutschfont2)
+  love.graphics.printf("Premere P per tornare al gioco", 0, 305, love.graphics.getWidth(), "center")
+
+
+
+ end
 
 end
