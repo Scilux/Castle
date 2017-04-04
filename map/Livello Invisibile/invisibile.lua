@@ -8,7 +8,7 @@ return {
   height = 30,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 75,
+  nextobjectid = 77,
   properties = {},
   tilesets = {
     {
@@ -506,12 +506,12 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
           id = 34,
-          name = "spwanfloor",
+          name = "spawnfloor",
           type = "",
           shape = "rectangle",
           x = 96,
@@ -521,7 +521,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -536,7 +536,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -551,12 +551,12 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
           id = 45,
-          name = "spwanfloor",
+          name = "spawnfloor",
           type = "",
           shape = "rectangle",
           x = 80,
@@ -566,12 +566,12 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
           id = 46,
-          name = "spwanfloor",
+          name = "spawnfloor",
           type = "",
           shape = "rectangle",
           x = 144,
@@ -581,12 +581,12 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
           id = 53,
-          name = "spwan",
+          name = "spawn",
           type = "",
           shape = "rectangle",
           x = 112,
@@ -639,7 +639,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -654,7 +654,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -669,7 +669,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -684,7 +684,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -699,7 +699,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -714,7 +714,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -729,7 +729,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -744,7 +744,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -759,7 +759,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -774,7 +774,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
           }
         },
         {
@@ -789,7 +789,37 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["spawnback"] = true
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 75,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 112,
+          y = 304,
+          width = 64,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 76,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 176,
+          y = 272,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
           }
         }
       }
