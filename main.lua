@@ -339,19 +339,28 @@ for k, object in pairs(map.objects) do
    doMove = true
     map = sti("map/Livello Invisibile/invisibile.lua")
     map:draw("center")
+
     for k, object in pairs(map.objects) do
       print(object.name)
         if object.name == "spwan" then
           spawnpoint.startX = object.x
           spawnpoint.startY = object.y
           --print(object.x)
-        end
-      end
-      
 
+
+
+end
+
+      end
+      player:draw()
+    elseif (game.status == "lvl4") then
+      doMove = true
+      map = sti("map/livello teletrasporto/teleport.lua")
+      map:draw()
+player:draw()
       --print(spawnpoint.startX, spawnpoint.startY)
 
-player:draw()
+
 
 elseif (game.status == "pause") then
   map:draw()
