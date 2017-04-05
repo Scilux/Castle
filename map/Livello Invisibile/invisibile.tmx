@@ -89,7 +89,7 @@
 0,0,2160,0,0,0,0,0,0,0,0,0,0,0,0,2385,0,0,0,0,0,0,0,0,0,2386,0,0,0,0
 </data>
  </layer>
- <objectgroup name="obstacles" visible="0">
+ <objectgroup name="obstacles">
   <object id="2" name="wall" x="0" y="0" width="16" height="480">
    <properties>
     <property name="unwalkable" type="bool" value="true"/>
