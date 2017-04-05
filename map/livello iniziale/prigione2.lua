@@ -276,7 +276,7 @@ return {
     {
       type = "objectgroup",
       name = "Obstacles",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -295,6 +295,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -310,6 +311,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -325,6 +327,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -340,6 +343,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -355,6 +359,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -370,6 +375,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -385,6 +391,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -400,6 +407,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -414,23 +422,8 @@ return {
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {}
-        },
-        {
-          id = 25,
-          name = "prisondoor",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 80,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
           properties = {
-            ["tileX"] = 0,
-            ["tileY"] = 2,
-            ["unwalkable"] = true
+            ["collidable"] = false
           }
         },
         {
@@ -445,6 +438,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },

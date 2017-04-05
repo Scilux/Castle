@@ -96,57 +96,63 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="Obstacles" visible="0">
+ <objectgroup name="Obstacles">
   <object id="1" name="wall" x="0" y="0" width="16" height="272">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="2" name="wall" x="0" y="256" width="480" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="3" name="wall" x="0" y="0" width="480" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="5" name="wall" x="464" y="0" width="16" height="272">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="6" name="bed" x="448" y="16" width="16" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="12" name="prisonwall" x="336" y="16" width="16" height="64">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="13" name="prisonwall" x="16" y="80" width="384" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="18" name="prisonwall" x="416" y="80" width="48" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="21" name="spawn" x="416" y="32" width="16" height="16"/>
-  <object id="25" name="prisondoor" x="400" y="80" width="16" height="16">
+  <object id="21" name="spawn" x="416" y="32" width="16" height="16">
    <properties>
-    <property name="tileX" type="int" value="0"/>
-    <property name="tileY" type="int" value="2"/>
-    <property name="unwalkable" type="bool" value="true"/>
+    <property name="collidable" type="bool" value="false"/>
    </properties>
   </object>
   <object id="27" name="prisonwall" x="16" y="176" width="448" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
