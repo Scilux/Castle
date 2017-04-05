@@ -207,7 +207,7 @@ return {
       encoding = "lua",
       data = {
         0, 0, 0, 2213, 0, 0, 2385, 0, 0, 0, 2213, 0, 0, 0, 1840, 0, 0, 0, 0, 2213, 0, 0, 0, 2161, 0, 0, 2213, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2215, 0, 2215, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -241,7 +241,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -260,6 +260,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -275,6 +276,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -290,6 +292,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = false
           }
         },
@@ -305,6 +308,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -333,6 +337,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -594,6 +599,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -609,6 +615,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },

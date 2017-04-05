@@ -58,7 +58,7 @@
  <layer name="background2" width="30" height="30">
   <data encoding="csv">
 0,0,0,2213,0,0,2385,0,0,0,2213,0,0,0,1840,0,0,0,0,2213,0,0,0,2161,0,0,2213,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,2215,0,2215,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -92,27 +92,32 @@
  <objectgroup name="obstacles">
   <object id="2" name="wall" x="0" y="0" width="16" height="480">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="3" name="wall" x="0" y="464" width="480" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="4" name="wall" x="464" y="448" width="16" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="false"/>
    </properties>
   </object>
   <object id="5" name="wall" x="464" y="0" width="16" height="432">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="6" name="door" x="464" y="432" width="16" height="16"/>
   <object id="10" name="wall" x="0" y="0" width="224" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
@@ -160,11 +165,13 @@
   <object id="53" name="spawn" x="112" y="416" width="16" height="16"/>
   <object id="55" name="wall" x="0" y="64" width="192" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
   <object id="56" name="wall" x="208" y="64" width="256" height="16">
    <properties>
+    <property name="collidable" type="bool" value="true"/>
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>

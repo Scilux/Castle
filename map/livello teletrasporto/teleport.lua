@@ -257,6 +257,63 @@ return {
       terrains = {},
       tilecount = 16,
       tiles = {}
+    },
+    {
+      name = "Armor",
+      firstgid = 3231,
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      image = "../../assets/DawnLike/Items/Armor.png",
+      imagewidth = 128,
+      imageheight = 144,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 72,
+      tiles = {}
+    },
+    {
+      name = "MedWep",
+      firstgid = 3303,
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      image = "../../assets/DawnLike/Items/MedWep.png",
+      imagewidth = 128,
+      imageheight = 32,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 16,
+      tiles = {}
+    },
+    {
+      name = "LongWep",
+      firstgid = 3319,
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      image = "../../assets/DawnLike/Items/LongWep.png",
+      imagewidth = 128,
+      imageheight = 112,
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      properties = {},
+      terrains = {},
+      tilecount = 56,
+      tiles = {}
     }
   },
   layers = {
@@ -1413,13 +1470,79 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 2417, 0, 3143, 3144, 0, 2417, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 3183, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 2340, 0, 0, 0, 0, 2341, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 2443, 0, 0, 2416, 3184, 0, 0, 2440, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 2442, 0, 0, 0, 0, 0, 0, 2441, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 2416, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 2416, 0, 0, 0, 0, 3207, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 3181, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 2340, 2467, 2468, 2468, 2469, 2341, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 2442, 0, 2475, 2476, 2476, 2477, 0, 2440, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 2442, 0, 2475, 2476, 2476, 2477, 0, 2440, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 2442, 0, 2475, 2476, 2476, 2477, 0, 2440, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 2443, 0, 2475, 2476, 2476, 2477, 0, 2441, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 2483, 2484, 2484, 2485, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      name = "stanza9c",
+      x = 0,
+      y = 0,
+      width = 64,
+      height = 50,
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 3331, 0, 0, 0, 0, 0, 0, 3299, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 3322, 0, 0, 0, 0, 0, 0, 3295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 3311, 0, 0, 0, 0, 0, 0, 3279, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3301, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -1979,7 +2102,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -1998,6 +2121,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2013,6 +2137,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2028,6 +2153,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2043,6 +2169,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2058,6 +2185,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2073,6 +2201,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2088,6 +2217,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2103,6 +2233,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2118,6 +2249,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2133,6 +2265,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2148,6 +2281,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2163,6 +2297,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2178,6 +2313,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2193,6 +2329,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2208,6 +2345,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2223,6 +2361,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2238,6 +2377,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2253,6 +2393,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2268,6 +2409,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2283,6 +2425,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2298,6 +2441,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2313,6 +2457,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2328,6 +2473,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2343,6 +2489,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2358,6 +2505,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2373,6 +2521,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2388,6 +2537,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2403,6 +2553,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2418,6 +2569,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2433,6 +2585,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2448,6 +2601,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2463,6 +2617,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2478,6 +2633,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2493,6 +2649,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2508,6 +2665,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2523,6 +2681,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2538,6 +2697,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2553,6 +2713,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2568,6 +2729,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2583,6 +2745,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2598,6 +2761,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2613,6 +2777,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2628,6 +2793,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2643,6 +2809,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2658,6 +2825,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2673,6 +2841,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2688,6 +2857,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2703,6 +2873,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2746,6 +2917,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2761,6 +2933,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2776,6 +2949,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2791,6 +2965,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2806,6 +2981,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2821,6 +2997,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2836,6 +3013,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2851,6 +3029,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2866,6 +3045,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2881,6 +3061,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2896,6 +3077,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2911,6 +3093,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2926,6 +3109,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2941,6 +3125,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2952,25 +3137,11 @@ return {
           x = 176,
           y = 304,
           width = 16,
-          height = 16,
+          height = 64,
           rotation = 0,
           visible = true,
           properties = {
-            ["unwalkable"] = true
-          }
-        },
-        {
-          id = 154,
-          name = "wall",
-          type = "",
-          shape = "rectangle",
-          x = 176,
-          y = 320,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -2982,25 +3153,11 @@ return {
           x = 64,
           y = 304,
           width = 16,
-          height = 16,
+          height = 64,
           rotation = 0,
           visible = true,
           properties = {
-            ["unwalkable"] = true
-          }
-        },
-        {
-          id = 156,
-          name = "wall",
-          type = "",
-          shape = "rectangle",
-          x = 64,
-          y = 320,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3016,6 +3173,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3031,6 +3189,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3046,6 +3205,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3061,6 +3221,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3076,6 +3237,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3091,6 +3253,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3106,6 +3269,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3121,6 +3285,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3136,6 +3301,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3151,6 +3317,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3166,6 +3333,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3181,6 +3349,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3196,6 +3365,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3211,6 +3381,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3226,6 +3397,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3241,6 +3413,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3256,6 +3429,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3271,6 +3445,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3286,6 +3461,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         },
@@ -3301,6 +3477,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["collidable"] = true,
             ["unwalkable"] = true
           }
         }

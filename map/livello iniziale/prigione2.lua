@@ -276,7 +276,7 @@ return {
     {
       type = "objectgroup",
       name = "Obstacles",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -422,9 +422,7 @@ return {
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {
-            ["collidable"] = false
-          }
+          properties = {}
         },
         {
           id = 27,
