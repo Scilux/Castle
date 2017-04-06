@@ -126,7 +126,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="obstacles" visible="0">
+ <objectgroup name="obstacles">
   <object id="1" name="wall" x="80" y="304" width="240" height="16">
    <properties>
     <property name="collidable" type="bool" value="true"/>
@@ -196,6 +196,7 @@
   <object id="16" name="chest" x="192" y="80" width="16" height="16">
    <properties>
     <property name="collidable" type="bool" value="true"/>
+    <property name="key" type="bool" value="true"/>
    </properties>
   </object>
   <object id="17" name="chest" x="128" y="64" width="16" height="16">
