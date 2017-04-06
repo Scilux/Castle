@@ -8,7 +8,7 @@ return {
   height = 30,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 79,
+  nextobjectid = 98,
   properties = {},
   tilesets = {
     {
@@ -207,9 +207,9 @@ return {
       encoding = "lua",
       data = {
         0, 0, 0, 2209, 0, 0, 2385, 0, 0, 0, 2209, 0, 0, 0, 1840, 0, 0, 0, 0, 2209, 0, 0, 0, 2161, 0, 0, 2209, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2208, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 2208, 0, 0, 0, 0, 0, 0, 2208, 0, 2208, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2208, 0, 0, 2208, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -387,7 +387,7 @@ return {
           shape = "rectangle",
           x = 176,
           y = 240,
-          width = 224,
+          width = 160,
           height = 16,
           rotation = 0,
           visible = true,
@@ -411,9 +411,9 @@ return {
           name = "invisiblefloor",
           type = "",
           shape = "rectangle",
-          x = 80,
+          x = 160,
           y = 144,
-          width = 304,
+          width = 224,
           height = 16,
           rotation = 0,
           visible = true,
@@ -626,7 +626,7 @@ return {
           shape = "rectangle",
           x = 176,
           y = 256,
-          width = 224,
+          width = 144,
           height = 16,
           rotation = 0,
           visible = true,
@@ -654,9 +654,9 @@ return {
           name = "spawnfloor",
           type = "",
           shape = "rectangle",
-          x = 80,
+          x = 176,
           y = 160,
-          width = 304,
+          width = 208,
           height = 16,
           rotation = 0,
           visible = true,
@@ -831,7 +831,7 @@ return {
         },
         {
           id = 78,
-          name = "door2",
+          name = "door5",
           type = "",
           shape = "rectangle",
           x = 224,
@@ -841,6 +841,260 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 80,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 320,
+          y = 256,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 81,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 336,
+          y = 288,
+          width = 32,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 82,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 352,
+          y = 240,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 83,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 368,
+          y = 240,
+          width = 32,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 84,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 304,
+          y = 272,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 85,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 320,
+          y = 304,
+          width = 64,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 86,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 368,
+          y = 256,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 87,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 384,
+          y = 256,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 88,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 336,
+          y = 240,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 89,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 144,
+          y = 144,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 90,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 160,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 91,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 128,
+          y = 176,
+          width = 32,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 92,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 128,
+          y = 144,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 93,
+          name = "invisiblefloor",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 144,
+          width = 48,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 94,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 176,
+          y = 176,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 95,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 128,
+          y = 192,
+          width = 64,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 96,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 112,
+          y = 160,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
+        },
+        {
+          id = 97,
+          name = "spawnfloor",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 160,
+          width = 32,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["spawnback"] = "spawn"
+          }
         }
       }
     }
