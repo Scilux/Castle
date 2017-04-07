@@ -138,13 +138,6 @@
    </properties>
   </object>
   <object id="21" name="spawn" x="416" y="32" width="16" height="16"/>
-  <object id="25" name="prisondoor" x="400" y="80" width="16" height="16">
-   <properties>
-    <property name="tileX" type="int" value="0"/>
-    <property name="tileY" type="int" value="2"/>
-    <property name="unwalkable" type="bool" value="true"/>
-   </properties>
-  </object>
   <object id="27" name="prisonwall" x="16" y="176" width="448" height="16">
    <properties>
     <property name="unwalkable" type="bool" value="true"/>

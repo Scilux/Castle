@@ -192,7 +192,7 @@
 0,0,1904,0,0,1904,0,0,2056,2056,0,0,1904,0,0,1904,0,0
 </data>
  </layer>
- <objectgroup name="obstacles" visible="0">
+ <objectgroup name="obstacles">
   <object id="1" name="wall" x="0" y="0" width="128" height="16">
    <properties>
     <property name="collidable" type="bool" value="true"/>
