@@ -417,23 +417,6 @@ return {
           properties = {}
         },
         {
-          id = 25,
-          name = "prisondoor",
-          type = "",
-          shape = "rectangle",
-          x = 400,
-          y = 80,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["tileX"] = 0,
-            ["tileY"] = 2,
-            ["unwalkable"] = true
-          }
-        },
-        {
           id = 27,
           name = "prisonwall",
           type = "",
