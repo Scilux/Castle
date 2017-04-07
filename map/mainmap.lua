@@ -561,9 +561,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 16,
-          y = 464,
+          y = 448,
           width = 16,
-          height = 48,
+          height = 64,
           rotation = 0,
           visible = true,
           properties = {
@@ -595,7 +595,7 @@ return {
           x = 256,
           y = 528,
           width = 16,
-          height = 48,
+          height = 64,
           rotation = 0,
           visible = true,
           properties = {
@@ -611,7 +611,7 @@ return {
           x = 16,
           y = 528,
           width = 16,
-          height = 48,
+          height = 64,
           rotation = 0,
           visible = true,
           properties = {
@@ -641,9 +641,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 0,
-          y = 544,
+          y = 528,
           width = 16,
-          height = 240,
+          height = 256,
           rotation = 0,
           visible = true,
           properties = {
@@ -657,9 +657,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 272,
-          y = 560,
+          y = 528,
           width = 16,
-          height = 224,
+          height = 256,
           rotation = 0,
           visible = true,
           properties = {
