@@ -3,10 +3,10 @@ local player = {x = 70, y = 70, w = 13, h = 13, speed = 80, status = "normal"}
 local world
 
 function player.load (w)
-world = w
+  world = w
   --animazioni player
-    playersheet = love.graphics.newImage("assets/DawnLike/Commissions/Template.png")
-    player.anim = sodapop.newAnimatedSprite()
+  playersheet = love.graphics.newImage("assets/DawnLike/Commissions/Template.png")
+  player.anim = sodapop.newAnimatedSprite()
 
     player.anim:addAnimation("walk-left", {
       image = playersheet,
@@ -14,7 +14,6 @@ world = w
       frameHeight = 16,
       frames = {
         {1, 2, 4, 2, .2}
-
       }
     })
     player.anim:addAnimation("walk-up", {
@@ -23,7 +22,6 @@ world = w
       frameHeight = 16,
       frames = {
         {1, 4, 4, 4, .2}
-
       }
     })
     player.anim:addAnimation("walk-right", {
@@ -32,7 +30,6 @@ world = w
       frameHeight = 16,
       frames = {
         {1, 3, 4, 3, .2}
-
       }
     })
     player.anim:addAnimation("walk-down", {
@@ -41,12 +38,8 @@ world = w
       frameHeight = 16,
       frames = {
         {1, 1, 4, 1, .2}
-
       }
     })
-
-
-
 
 end
 
@@ -73,22 +66,19 @@ function player.update(dt)
       player.anim:switch("walk-up", true)
 
     else
-
       player.anim:goToFrame(1)
-
 
     end
 
 
-  if dx ~= 0 or dy ~= 0 then
+      if dx ~= 0 or dy ~= 0 then
         local cols      -- collisioni
         local cols_len  -- numero di collisioni
         player.x, player.y, cols, cols_len = world:move(player, player.x + dx, player.y + dy, filterMovement)
-        end
+      end
 
     player.anim.x = player.x
     player.anim.y = player.y
-
     player.anim:update(dt)
 
 end
@@ -96,6 +86,7 @@ end
 
 
 function player.draw()
+  
   player.anim:draw(5, 6)
 
 end
