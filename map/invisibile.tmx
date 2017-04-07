@@ -89,7 +89,7 @@
 0,0,2160,0,0,0,0,0,0,0,0,0,0,0,0,2385,0,0,0,0,0,0,0,0,0,2386,0,0,0,0
 </data>
  </layer>
- <objectgroup name="obstacles" visible="0">
+ <objectgroup name="obstacles">
   <object id="2" name="wall" x="0" y="0" width="16" height="480">
    <properties>
     <property name="collidable" type="bool" value="true"/>
@@ -114,7 +114,7 @@
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="6" name="door" x="464" y="432" width="16" height="16"/>
+  <object id="6" name="door13" x="464" y="432" width="16" height="16"/>
   <object id="10" name="wall" x="0" y="0" width="224" height="16">
    <properties>
     <property name="collidable" type="bool" value="true"/>
