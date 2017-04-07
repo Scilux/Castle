@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="50" tilewidth="16" tileheight="16" nextobjectid="34">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="50" tilewidth="16" tileheight="16" nextobjectid="36">
  <tileset firstgid="1" name="Wall" tilewidth="16" tileheight="16" tilecount="1020" columns="20">
   <image source="../assets/DawnLike/Objects/Wall.png" width="320" height="816"/>
  </tileset>
@@ -192,7 +192,7 @@
 0,0,1904,0,0,1904,0,0,2056,2056,0,0,1904,0,0,1904,0,0
 </data>
  </layer>
- <objectgroup name="obstacles">
+ <objectgroup name="obstacles" visible="0">
   <object id="1" name="wall" x="0" y="0" width="128" height="16">
    <properties>
     <property name="collidable" type="bool" value="true"/>
@@ -354,6 +354,18 @@
   <object id="29" name="door3" x="272" y="192" width="16" height="16"/>
   <object id="30" name="door4" x="0" y="192" width="16" height="16"/>
   <object id="31" name="maingate" x="128" y="0" width="32" height="16"/>
+  <object id="34" name="wall" x="32" y="272" width="16" height="48">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="35" name="wall" x="240" y="272" width="16" height="48">
+   <properties>
+    <property name="collidable" type="bool" value="true"/>
+    <property name="unwalkable" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="background4" width="18" height="50">
   <data encoding="csv">
