@@ -11,6 +11,7 @@ gratasotto = {}
 LVL = 0
 doMove = true
 camb = 1
+spawn = {}
 
 
 local sodapop = require 'assets/playerimages/sodapop'
@@ -204,16 +205,16 @@ local impassableZone
           if (object.name == "door" and camb == 1) then
             player.anim.x = object.x
             player.anim.y = object.y
-            camb = camb + 1
+            camb = 2
           end
         end
   elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 3) then
         game.status = "lvl3"
         for k, object in pairs(map.objects) do
-          if (object.name == "door2" and camb == 2) then
+          if (object.name == "door13" and camb == 2) then
             player.anim.x = object.x
             player.anim.y = object.y
-            camb = camb + 1
+            camb = 3
           end
         end
   elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 4) then
@@ -222,7 +223,7 @@ local impassableZone
           if (object.name == "door11" and camb == 3) then
               player.anim.x = object.x
               player.anim.y = object.y
-              camb = camb + 1
+              camb = 4
           end
         end
   elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 5) then
@@ -231,7 +232,7 @@ local impassableZone
               if (object.name == "door3" and camb == 4) then
                   player.anim.x = object.x
                   player.anim.y = object.y
-                  camb = camb + 1
+                  camb = 5
               end
             end
   end
@@ -364,7 +365,8 @@ for k, object in pairs(map.objects) do
                 LVL = 3
                 break
               end
-            elseif object.name == "door2" then
+            end
+            if object.name == "door2" then
                   if ( dx >= object.x and
                        dx < object.x + object.width + 2 and
                        dy >= object.y - 4 and
@@ -384,17 +386,25 @@ for k, object in pairs(map.objects) do
    doMove = true
     map = sti("map/invisibile.lua")
     map:draw()
-    --[[for k, object in pairs(map.objects) do
-      print(object.name)
-        if object.name == "door" then
-          spawnpoint.startX = object.x
-          spawnpoint.startY = object.y
-          player.x = spawnpoint.startX
-          player.y = spawnpoint.startY
-          --print(object.x)
+    for k, object in pairs(map.objects) do
+      if object.name == "spawn" then
+        spawn.X = object.x
+        spawn.Y = object.y
+      end
+        if object.name == "spawnfloor" then
+          if ( dx >= object.x and
+               dx < object.x + object.width + 2 and
+               dy >= object.y - 4 and
+               dy < object.y + object.height + 2) then
+
+                 player.anim.x = spawn.X
+                 player.anim.y = spawn.Y
+               end
+
+
         end
       end
-    ]]--
+
 
 
       --print(spawnpoint.startX, spawnpoint.startY)
