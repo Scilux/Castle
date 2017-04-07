@@ -366,7 +366,7 @@
     <property name="unwalkable" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="36" name="door" x="128" y="784" width="16" height="16"/>
+  <object id="36" name="door" x="128" y="768" width="16" height="16"/>
  </objectgroup>
  <layer name="background4" width="18" height="50">
   <data encoding="csv">
