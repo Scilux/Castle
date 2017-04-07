@@ -10,6 +10,7 @@ gratasopra = {}
 gratasotto = {}
 LVL = 0
 doMove = true
+camb = 1
 
 
 local sodapop = require 'assets/playerimages/sodapop'
@@ -196,17 +197,43 @@ local impassableZone
 
   if((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 1) then
         game.status = "lvl1"
-        for k, object in pairs(map.objects) do
-          if object.name == "door" then
-            player.anim.x = object.x
-            player.anim.y = object.y
-          end
-        end
 
   elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 2) then
         game.status = "lvl2"
+        for k, object in pairs(map.objects) do
+          if (object.name == "door" and camb == 1) then
+            player.anim.x = object.x
+            player.anim.y = object.y
+            camb = camb + 1
+          end
+        end
   elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 3) then
         game.status = "lvl3"
+        for k, object in pairs(map.objects) do
+          if (object.name == "door2" and camb == 2) then
+            player.anim.x = object.x
+            player.anim.y = object.y
+            camb = camb + 1
+          end
+        end
+  elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 4) then
+        game.status = "lvl4"
+        for k, object in pairs(map.objects) do
+          if (object.name == "door11" and camb == 3) then
+              player.anim.x = object.x
+              player.anim.y = object.y
+              camb = camb + 1
+          end
+        end
+  elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 5) then
+            game.status = "lvl5"
+            for k, object in pairs(map.objects) do
+              if (object.name == "door3" and camb == 4) then
+                  player.anim.x = object.x
+                  player.anim.y = object.y
+                  camb = camb + 1
+              end
+            end
   end
 
 end
@@ -305,7 +332,6 @@ for k, object in pairs(map.objects) do
            break
          end
        end
-
    end
 
      --[[if (G) then
@@ -328,6 +354,29 @@ for k, object in pairs(map.objects) do
      map = sti("map/mainmap.lua")
      map:draw("center")
      player.anim:draw()
+
+     for k, object in pairs(map.objects) do
+          if object.name == "door1" then
+              if ( dx >= object.x and
+                   dx < object.x + object.width + 2 and
+                   dy >= object.y - 4 and
+                   dy < object.y + object.height + 2) then
+                LVL = 3
+                break
+              end
+            elseif object.name == "door2" then
+                  if ( dx >= object.x and
+                       dx < object.x + object.width + 2 and
+                       dy >= object.y - 4 and
+                       dy < object.y + object.height + 2) then
+                    LVL = 4
+                    break
+                  end
+            end
+
+        end
+
+
 
 
 
