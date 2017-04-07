@@ -18,7 +18,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Wall.png",
+      image = "../assets/DawnLike/Objects/Wall.png",
       imagewidth = 320,
       imageheight = 816,
       tileoffset = {
@@ -37,7 +37,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Floor.png",
+      image = "../assets/DawnLike/Objects/Floor.png",
       imagewidth = 336,
       imageheight = 624,
       tileoffset = {
@@ -56,7 +56,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Fence.png",
+      image = "../assets/DawnLike/Objects/Fence.png",
       imagewidth = 128,
       imageheight = 192,
       tileoffset = {
@@ -75,7 +75,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Decor0.png",
+      image = "../assets/DawnLike/Objects/Decor0.png",
       imagewidth = 128,
       imageheight = 352,
       tileoffset = {
@@ -94,7 +94,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Door0.png",
+      image = "../assets/DawnLike/Objects/Door0.png",
       imagewidth = 128,
       imageheight = 96,
       tileoffset = {
@@ -113,7 +113,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Tile.png",
+      image = "../assets/DawnLike/Objects/Tile.png",
       imagewidth = 128,
       imageheight = 64,
       tileoffset = {
@@ -132,7 +132,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Ore0.png",
+      image = "../assets/DawnLike/Objects/Ore0.png",
       imagewidth = 144,
       imageheight = 112,
       tileoffset = {
@@ -151,7 +151,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Decor0.png",
+      image = "../assets/DawnLike/Objects/Decor0.png",
       imagewidth = 128,
       imageheight = 352,
       tileoffset = {
