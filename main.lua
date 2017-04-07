@@ -244,19 +244,8 @@ function love.keypressed(key, scancode, isrepeat)
   -- controlliamo in che stato di gioco siamo
   if(game.status ~= "play") then
 
-    if(game.status == "start" and key == "1") then
-      game.status = "lvl1"
-      LVL = 1
-    elseif(game.status == "start" and key == "2") then
-          game.status = "lvl2"
-          LVL = 2
-    elseif(game.status == "start" and key == "3") then
-          game.status = "lvl3"
-          LVL = 3
-    elseif(game.status == "start" and key == "4") then
-          game.status = "lvl4"
-          LVL = 4
-    elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
+
+    if((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
           game.status = "start"
           LVL = 0
     elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "p") then
@@ -293,16 +282,16 @@ function love.draw()
      love.graphics.printf("Castle Master", 0, 75, love.graphics.getWidth(), "center")
 
      love.graphics.setFont(deutschfont2)
-     love.graphics.printf("Start", 0, 200, love.graphics.getWidth(), "center")
+     love.graphics.printf("per iniziare premi 1", 0, 200, love.graphics.getWidth(), "center")
 
-     love.graphics.setFont(deutschfont2)
+     --[[love.graphics.setFont(deutschfont2)
      love.graphics.printf("Livello 1", 0, 235, love.graphics.getWidth(), "center")
      love.graphics.setFont(deutschfont2)
      love.graphics.printf("Livello 2", 0, 270, love.graphics.getWidth(), "center")
      love.graphics.setFont(deutschfont2)
      love.graphics.printf("Livello 3", 0, 305, love.graphics.getWidth(), "center")
      love.graphics.setFont(deutschfont2)
-     love.graphics.printf("Livello 4", 0, 340, love.graphics.getWidth(), "center")
+     love.graphics.printf("Livello 4", 0, 340, love.graphics.getWidth(), "center")]]--
 
      love.graphics.setFont(deutschfont2)
      love.graphics.printf("Credits", 0, 500, love.graphics.getWidth(), "center")
@@ -357,7 +346,7 @@ for k, object in pairs(map.objects) do
      player.anim:draw()
 
      for k, object in pairs(map.objects) do
-          if object.name == "door1" then
+          if (object.name == "door1" and camb == 2) then
               if ( dx >= object.x and
                    dx < object.x + object.width + 2 and
                    dy >= object.y - 4 and
@@ -366,7 +355,7 @@ for k, object in pairs(map.objects) do
                 break
               end
             end
-            if object.name == "door2" then
+            if (object.name == "door2" and camb == 3)then
                   if ( dx >= object.x and
                        dx < object.x + object.width + 2 and
                        dy >= object.y - 4 and
