@@ -18,7 +18,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Wall.png",
+      image = "../assets/DawnLike/Objects/Wall.png",
       imagewidth = 320,
       imageheight = 816,
       tileoffset = {
@@ -37,7 +37,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Floor.png",
+      image = "../assets/DawnLike/Objects/Floor.png",
       imagewidth = 336,
       imageheight = 624,
       tileoffset = {
@@ -56,7 +56,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Pit0.png",
+      image = "../assets/DawnLike/Objects/Pit0.png",
       imagewidth = 128,
       imageheight = 512,
       tileoffset = {
@@ -75,7 +75,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Door0.png",
+      image = "../assets/DawnLike/Objects/Door0.png",
       imagewidth = 128,
       imageheight = 96,
       tileoffset = {
@@ -94,7 +94,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Effect0.png",
+      image = "../assets/DawnLike/Objects/Effect0.png",
       imagewidth = 128,
       imageheight = 416,
       tileoffset = {
@@ -113,7 +113,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Decor0.png",
+      image = "../assets/DawnLike/Objects/Decor0.png",
       imagewidth = 128,
       imageheight = 352,
       tileoffset = {
@@ -132,7 +132,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Items/Chest0.png",
+      image = "../assets/DawnLike/Items/Chest0.png",
       imagewidth = 128,
       imageheight = 48,
       tileoffset = {
@@ -151,7 +151,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Items/Book.png",
+      image = "../assets/DawnLike/Items/Book.png",
       imagewidth = 128,
       imageheight = 144,
       tileoffset = {
@@ -170,7 +170,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Tree0.png",
+      image = "../assets/DawnLike/Objects/Tree0.png",
       imagewidth = 192,
       imageheight = 576,
       tileoffset = {
@@ -189,7 +189,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Objects/Ore0.png",
+      image = "../assets/DawnLike/Objects/Ore0.png",
       imagewidth = 144,
       imageheight = 112,
       tileoffset = {
@@ -208,7 +208,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Items/LongWep.png",
+      image = "../assets/DawnLike/Items/LongWep.png",
       imagewidth = 128,
       imageheight = 112,
       tileoffset = {
@@ -227,7 +227,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Items/ShortWep.png",
+      image = "../assets/DawnLike/Items/ShortWep.png",
       imagewidth = 128,
       imageheight = 80,
       tileoffset = {
@@ -246,7 +246,7 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      image = "../../assets/DawnLike/Items/Rock.png",
+      image = "../assets/DawnLike/Items/Rock.png",
       imagewidth = 128,
       imageheight = 32,
       tileoffset = {
@@ -1979,7 +1979,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,

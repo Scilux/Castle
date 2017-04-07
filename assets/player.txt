@@ -1,0 +1,78 @@
+function player.load ()
+
+    playersheet = love.graphics.newImage("assets/DawnLike/Commissions/Template.png")
+    player.anim = sodapop.newAnimatedSprite()
+
+    player.anim:addAnimation("walk-left", {
+      image = playersheet,
+      frameWidth = 16,
+      frameHeight = 16,
+      frames = {
+        {1, 2, 4, 2, .2}
+
+      }
+    })
+    player.anim:addAnimation("walk-up", {
+      image = playersheet,
+      frameWidth = 16,
+      frameHeight = 16,
+      frames = {
+        {1, 4, 4, 4, .2}
+
+      }
+    })
+    player.anim:addAnimation("walk-right", {
+      image = playersheet,
+      frameWidth = 16,
+      frameHeight = 16,
+      frames = {
+        {1, 3, 4, 3, .2}
+
+      }
+    })
+    player.anim:addAnimation("walk-down", {
+      image = playersheet,
+      frameWidth = 16,
+      frameHeight = 16,
+      frames = {
+        {1, 1, 4, 1, .2}
+
+      }
+    })
+
+
+function player.update(dt)
+
+  local dx, dy = 0, 0
+    if love.keyboard.isDown('right') then
+      dx = player.speed * dt
+      player.anim:switch("walk-right", true)
+
+    elseif love.keyboard.isDown('left') then
+      dx = -player.speed * dt
+      player.anim:switch("walk-left", true)
+
+    elseif love.keyboard.isDown('down') then
+      dy = player.speed * dt
+      player.anim:switch("walk-down", true)
+
+    elseif love.keyboard.isDown('up') then
+      dy = -player.speed * dt
+      player.anim:switch("walk-up", true)
+
+    else
+
+      player.anim:goToFrame(1)
+
+
+    end
+
+
+    player.anim.x = player.x
+    player.anim.y = player.y
+
+    player.anim:update(dt)
+function player.draw()
+  player.anim:draw(5, 6)
+
+end
