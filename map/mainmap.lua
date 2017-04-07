@@ -8,7 +8,7 @@ return {
   height = 50,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 36,
+  nextobjectid = 38,
   properties = {},
   tilesets = {
     {
@@ -404,7 +404,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -923,6 +923,19 @@ return {
             ["collidable"] = true,
             ["unwalkable"] = true
           }
+        },
+        {
+          id = 36,
+          name = "door",
+          type = "",
+          shape = "rectangle",
+          x = 128,
+          y = 784,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
