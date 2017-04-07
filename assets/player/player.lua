@@ -45,7 +45,7 @@ world = w
       }
     })
 
-
+player.location = 0
 
 
 end
@@ -77,6 +77,12 @@ function player.update(dt)
       player.anim:goToFrame(1)
 
 
+    end
+
+    if player.x <= 16 then
+      player.location = player.location + 1
+      player.x = 128
+      player.y = 768
     end
 
 

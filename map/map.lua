@@ -1,42 +1,42 @@
-
-local sti = require "sti"
-
+local sti = require ("sti")
 map = {}
-map.tempMap = nil
+
 map.myMap = nil
+map.tempMap = nil
 map.sxBorder = 0
 map.dxBorder = 0
 map.upBorder = 0
 map.downBorder = 0
 
-function map.load()
 
-  map.myMap = sti("modules/Maps/basemain.lua")
-  map.sxBorder = 0
-  map.dxBorder = map.myMap.width * map.myMap.tilewidth - love.graphics.getWidth()
-  map.upBorder = 0
-  map.downBorder = map.myMap.height * map.myMap.tilewidth - love.graphics.getHeight()
+function map.load(world)
+map.world = world
+map.myMap = sti("map/livello iniziale/prigione2.lua", {"bump"})
+map.myMap:bump_init(map.world)
+map.sxBorder = 0
+map.dxBorder = map.myMap.width * map.myMap.tilewidth
+map.upBorder = 0
+map.downBorder = map.myMap.height * map.myMap.tileheight
+
+
 end
-
+local selectedInt
 
 function map.update(dt, int)
-  if int == 0 then
-     map.tempMap = sti("modules/Maps/basemain.lua")
-  elseif int == 1 then
-    map.tempMap = sti("modules/Maps/village.lua")
-  elseif int == -1 then
-    map.tempMap = sti("modules/Maps/mapExit.lua")
-  elseif int == 2 then
-    map.tempMap = sti("modules/Maps/dungeon2.lua")
-  end
 
-  map.myMap = map.tempMap
-  map.sxBorder = 0
-  map.dxBorder = map.myMap.width * map.myMap.tilewidth - love.graphics.getWidth()
-  map.upBorder = 0
-  map.downBorder = map.myMap.height * map.myMap.tilewidth - love.graphics.getHeight()
+if int == 0 and selectedInt ~= int then
+  map.myMap = sti("map/livello iniziale/prigione2.lua", {"bump"})
+  map.myMap:bump_init(map.world)
+elseif int == 1 and selectedInt ~= int then
+  map.myMap = sti("map/mappa principale/mainmap.lua", {"bump"})
+  map.myMap:bump_init(map.world)
+end
+
+
 map.myMap:update(dt)
 end
+
+
 
 function map.draw()
 map.myMap:draw()

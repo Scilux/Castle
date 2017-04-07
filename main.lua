@@ -5,6 +5,7 @@ local sti = require 'sti'
 local bump = require 'bump'
 local sodapop = require "assets/player/sodapop"
 local player = require "assets/player/player"
+local mappa = require "map/map"
 
 -- Creazione mondo
 local world = bump.newWorld()
@@ -22,17 +23,15 @@ local function filterMovement(item, other)
 
 
 function love.load(arg)
-
---Carico mappa iniziale
-  map = sti("map/livello iniziale/prigione2.lua", {"bump"})
-  map:bump_init(world)
+  mappa.load(world)
 
 
-for k, object in pairs(map.objects) do
+
+
+for k, object in pairs(mappa.myMap.objects) do
   if object.name == "spawn" then
     player.x = object.x
     player.y = object.y
-
 
   end
 end
@@ -58,8 +57,8 @@ end
 
 function love.update(dt)
 
-player.update (dt, int)
-
+player.update (dt)
+mappa.update(dt, player.location)
 
 end
 
@@ -67,11 +66,12 @@ end
 
 
 function love.draw()
-  map:draw()
+  --love.graphics.print(player.x, player.x, player.y + 150)
+  mappa.draw()
   player.draw ()
 
 
-
+  love.graphics.print(player.location, player.x, player.y - 200)
 
 
 
