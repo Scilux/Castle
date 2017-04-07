@@ -8,7 +8,7 @@ return {
   height = 50,
   tilewidth = 16,
   tileheight = 16,
-  nextobjectid = 34,
+  nextobjectid = 36,
   properties = {},
   tilesets = {
     {
@@ -404,7 +404,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -891,6 +891,38 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 34,
+          name = "wall",
+          type = "",
+          shape = "rectangle",
+          x = 32,
+          y = 272,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["collidable"] = true,
+            ["unwalkable"] = true
+          }
+        },
+        {
+          id = 35,
+          name = "wall",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 272,
+          width = 16,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["collidable"] = true,
+            ["unwalkable"] = true
+          }
         }
       }
     },

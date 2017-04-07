@@ -1979,7 +1979,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
