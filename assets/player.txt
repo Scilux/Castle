@@ -1,6 +1,6 @@
 function player.load ()
 
-playersheet = love.graphics.newImage("assets/DawnLike/Commissions/Template.png")
+    playersheet = love.graphics.newImage("assets/DawnLike/Commissions/Template.png")
     player.anim = sodapop.newAnimatedSprite()
 
     player.anim:addAnimation("walk-left", {
