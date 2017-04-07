@@ -241,7 +241,7 @@ return {
     {
       type = "objectgroup",
       name = "obstacles",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -314,7 +314,7 @@ return {
         },
         {
           id = 6,
-          name = "door",
+          name = "door13",
           type = "",
           shape = "rectangle",
           x = 464,
