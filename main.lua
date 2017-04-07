@@ -144,16 +144,16 @@ function love.update(dt)
 
 
 
-local impassableZone
+--local impassableZone
     -- se alla fine di tutti i controlli 'canMove' sarà ancora 'true',
   -- vorrà dire che è possibile muoversi nel punto desiderato
   canMove = true
   for k, object in pairs(map.objects) do
     if object.properties["collidable"] == true then
 
-      if ( dx >= object.x + 8 and
-           dx < object.x + object.width - 8 and
-           dy >= object.y + 3 and
+      if ( dx >= object.x - 8 and
+           dx < object.x + object.width - 24 and
+           dy >= object.y - 16 and
            dy < object.y + object.height - 8 ) then
         canMove = false
         break
@@ -161,10 +161,10 @@ local impassableZone
     end
     if object.properties["unwalkable"] == true then
 
-      if ( dx >= object.x + 4 and
-           dx < object.x + object.width - 4 and
-           dy >= object.y + 4 and
-           dy < object.y + object.height - 4 ) then
+      if ( dx >= object.x and
+           dx < object.x + object.width + 2 and
+           dy >= object.y - 4 and
+           dy < object.y + object.height + 2 ) then
         canMove = false
         break
       end
@@ -277,7 +277,7 @@ function love.draw()
      doMove = true
      map = sti("map/prigione.lua")
      map:draw()
-     player.anim:draw(5, 6)
+     player.anim:draw()
      --[[love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 64, gratasopra.Y)
      love.graphics.draw(tilesetlvl0, gratasopra.quad, gratasopra.X + 96, gratasopra.Y)
@@ -322,7 +322,7 @@ for k, object in pairs(map.objects) do
     doMove = true
      map = sti("map/mainmap.lua")
      map:draw("center")
-     player.anim:draw(5, 6)
+     player.anim:draw()
 
 
 
@@ -345,17 +345,17 @@ for k, object in pairs(map.objects) do
 
       --print(spawnpoint.startX, spawnpoint.startY)
 
-player.anim:draw(5, 6)
+player.anim:draw()
 
 elseif (game.status == "lvl4") then
   doMove = true
    map = sti("map/nowall.lua")
    map:draw()
-   player.anim:draw(5, 6)
+   player.anim:draw()
 
 elseif (game.status == "pause") then
   map:draw()
-  player.anim:draw(5, 6)
+  player.anim:draw()
   doMove = false
   love.graphics.setColor(255, 255, 255, 255)
   love.graphics.setFont(deutschfont)
