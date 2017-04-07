@@ -243,9 +243,11 @@ function love.keypressed(key, scancode, isrepeat)
 
   -- controlliamo in che stato di gioco siamo
   if(game.status ~= "play") then
+    if(game.status == "start" and key == "1") then
+          game.status = "lvl1"
+          LVL = 1
 
-
-    if((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
+  elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "0") then
           game.status = "start"
           LVL = 0
     elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "p") then
@@ -373,26 +375,8 @@ for k, object in pairs(map.objects) do
 
  elseif (game.status == "lvl3") then
    doMove = true
-    map = sti("map/invisibile.lua")
+    map = sti("map/nowall.lua")
     map:draw()
-    for k, object in pairs(map.objects) do
-      if object.name == "spawn" then
-        spawn.X = object.x
-        spawn.Y = object.y
-      end
-        if object.name == "spawnfloor" then
-          if ( dx >= object.x and
-               dx < object.x + object.width + 2 and
-               dy >= object.y - 4 and
-               dy < object.y + object.height + 2) then
-
-                 player.anim.x = spawn.X
-                 player.anim.y = spawn.Y
-               end
-
-
-        end
-      end
 
 
 
@@ -402,9 +386,25 @@ player.anim:draw()
 
 elseif (game.status == "lvl4") then
   doMove = true
-   map = sti("map/nowall.lua")
+   map = sti("map/invisibile.lua")
    map:draw()
-   player.anim:draw()
+   for k, object in pairs(map.objects) do
+     if object.name == "spawn" then
+       spawn.X = object.x
+       spawn.Y = object.y
+     end
+       if object.name == "spawnfloor" then
+         if ( dx >= object.x and
+              dx < object.x + object.width + 2 and
+              dy >= object.y - 4 and
+              dy < object.y + object.height + 2) then
+
+                player.anim.x = spawn.X
+                player.anim.y = spawn.Y
+              end
+       end
+     end
+player.anim:draw()
 
 elseif (game.status == "pause") then
   map:draw()
