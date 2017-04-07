@@ -1,4 +1,5 @@
 sti = require "sti"
+--bump = require "bump"
 --playerf = require "player.lua"
 player = {}
 spawnpoint = {}
@@ -144,22 +145,12 @@ function love.update(dt)
 
 
 
---local impassableZone
+local impassableZone
     -- se alla fine di tutti i controlli 'canMove' sarà ancora 'true',
   -- vorrà dire che è possibile muoversi nel punto desiderato
   canMove = true
   for k, object in pairs(map.objects) do
     if object.properties["collidable"] == true then
-
-      if ( dx >= object.x - 8 and
-           dx < object.x + object.width - 24 and
-           dy >= object.y - 16 and
-           dy < object.y + object.height - 8 ) then
-        canMove = false
-        break
-      end
-    end
-    if object.properties["unwalkable"] == true then
 
       if ( dx >= object.x and
            dx < object.x + object.width + 2 and
@@ -169,16 +160,15 @@ function love.update(dt)
         break
       end
     end
-    if object.properties["action"] == true then
-      if ( dx >= object.x + 16 and
-           dx < object.x + object.width - 16 and
-           dy >= object.y + 16 and
-           dy < object.y + object.height - 16 ) then
-      --love.graphics.setColor(255, 255, 255, 255)
-      --love.graphics.setFont(deutschfont2)
-      --love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
-      break
-    end
+    if object.properties["unwalkable"] == true then
+
+      if ( dx >= object.x and
+           dx < object.x + object.width + 2 and
+           dy >= object.y - 4 and
+           dy < object.y + object.height + 2) then
+        canMove = false
+        break
+      end
     end
   end
 
@@ -204,6 +194,21 @@ function love.update(dt)
     --player:update(dt)
     player.anim:update(dt)
 
+  if((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 1) then
+        game.status = "lvl1"
+        for k, object in pairs(map.objects) do
+          if object.name == "door" then
+            player.anim.x = object.x
+            player.anim.y = object.y
+          end
+        end
+
+  elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 2) then
+        game.status = "lvl2"
+  elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and LVL == 3) then
+        game.status = "lvl3"
+  end
+
 end
 
 function love.keypressed(key, scancode, isrepeat)
@@ -228,6 +233,7 @@ function love.keypressed(key, scancode, isrepeat)
           LVL = 0
     elseif((game.status == "lvl1" or game.status == "lvl2" or game.status == "lvl3" or game.status == "lvl4") and key == "p") then
           game.status = "pause"
+
     elseif(game.status == "pause" and key == "p") then
           if (LVL == 1) then
             game.status = "lvl1"
@@ -290,17 +296,16 @@ function love.draw()
      love.graphics.draw(tilesetlvl0, gratasotto.quad, gratasotto.X + 96, gratasotto.Y)]]--
 
 for k, object in pairs(map.objects) do
-     if object.properties["action"] == true then
-       if ( dx >= object.x and
-            dx < object.x + object.width and
-            dy >= object.y + 6 and
-            dy < object.y + object.height - 32) then
-       love.graphics.setColor(255, 255, 255, 255)
-       love.graphics.setFont(deutschfont3)
-       love.graphics.printf("Premi G", 0, 75, love.graphics.getWidth(), "center")
-       break
-     end
-     end
+     if object.name == "stair" then
+         if ( dx >= object.x and
+              dx < object.x + object.width + 2 and
+              dy >= object.y - 4 and
+              dy < object.y + object.height + 2) then
+           LVL = 2
+           break
+         end
+       end
+
    end
 
      --[[if (G) then
